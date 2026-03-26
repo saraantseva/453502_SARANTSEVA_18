@@ -22,6 +22,21 @@ def generate_random_list(size, min_val=-100, max_val=100):
     """
     return [random.randint(min_val, max_val) for _ in range(size)]
 
+def generate_numbers(size, min_val=-100, max_val=100):
+    """
+    Generator function using yield - yields numbers one by one.
+    
+    Args:
+        size: number of elements
+        min_val: minimum value (inclusive)
+        max_val: maximum value (inclusive)
+    
+    Yields:
+        int: random integer values one at a time
+    """
+    for _ in range(size):
+        yield random.randint(min_val, max_val)
+
 
 def input_user_list(size):
     """
@@ -124,10 +139,14 @@ def task5(max_v=20):
         if choice == True:
             min_val = get_int("Enter minimum value: ")
             max_val = get_int("Enter maximum value: ", min_val=min_val)
-            lst = generate_random_list(size, min_val, max_val)
+            #  lst = generate_random_list(size, min_val, max_val)
+            #  print_list(lst, "Generated list")
+            generator = generate_numbers(size, min_val, max_val)
+            lst = list(generator) 
+            
             print_list(lst, "Generated list")
         else:
-            lst = input_user_list(size)
+            lst = input_user_list(size)            
 
         process_list(lst)
  
