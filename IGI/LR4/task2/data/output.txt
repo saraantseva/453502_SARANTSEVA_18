@@ -1,0 +1,11 @@
+Total sentences: 15
+Declarative sentences: 10
+Interrogative sentences: 2
+Exclamatory sentences: 3
+Average sentence length (chars): 17.13
+Average word length (chars): 5.24
+Number of smileys: 6
+Arithmetic expressions: ['100 + 50', '200 - 75', '12 * 12', '100 / 4']
+Words with odd length: ['Как', 'У', 'отлично', 'Сегодня', 'хорошая', 'м', 'Обязательно', 'м', 'Это', 'будет', 'Я', 'люблю', 'Это', 'круто', 'Слово', 'слово', 'повторяется', 'повторяется', 'слова', 'и', 'и', 'Длинные', 'слова', 'и', 'иллюминация']
+Shortest word starting with 'i': 
+Duplicate words: ['и', 'м', 'на', 'повторяется', 'пойд', 'слова', 'слово', 'это']

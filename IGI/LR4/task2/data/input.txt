@@ -1,0 +1,13 @@
+Hello! How are you? I am fine, thank you. 
+What is your name? My name is Alice. 
+Wow! That's amazing! 
+Do you like Python? I love programming. 
+Let's test some arithmetic: 2 + 3, 10 - 4, 5 * 6, 15 / 3.
+Also negative numbers: -5 + 3, 10 - -2, -2 * -3.
+Here are some smileys: :-) ;) ;-) :( ;-] :-[ :-]]] ;----------]]]]]].
+The weather is nice today. Is it sunny? Yes, it is! 
+Interesting i idea. i love python. i am happy. 
+The word word appears twice twice here here. 
+Another test: apple banana apple cherry banana.
+Short i words: i, it, is, in, if. 
+Longer i words: interesting, important, incredible.
