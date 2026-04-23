@@ -1,0 +1,7 @@
+ARC SIN SERIES STATISTICS
+x = 0.9
+Precision (eps): 1.00e-04
+Terms used: 18
+math.asin(x): 1.1197695150
+Taylor result: 1.1194732573
+Error: 2.96e-04
