@@ -11,3 +11,10 @@ The word word appears twice twice here here.
 Another test: apple banana apple cherry banana.
 Short i words: i, it, is, in, if. 
 Longer i words: interesting, important, incredible.
+12hdf4 - has digits
+abc123 - has digits and vowels
+test456 - has digits and vowels  
+hello789 - has digits and vowels
+python3 - has digits and vowels
+c0d3 - has digits and vowels
+a1b2c3 - has digits and vowels

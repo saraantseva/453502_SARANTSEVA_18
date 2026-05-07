@@ -35,6 +35,7 @@ class MatrixAnalyzer:
         # 1. Creating array with random integers
         self.matrix = np.random.randint(low, high, size=(n, m))
         print(f"Generated {n}x{m} integer matrix:\n{self.matrix}\n")
+        #np.random.uniform(low, high, size)
 
     def demonstrate_array_creation(self):
         """Show different ways to create arrays."""
@@ -45,6 +46,7 @@ class MatrixAnalyzer:
         # zeros, ones, full, arange, linspace
         print("np.zeros((2,3)):\n", np.zeros((2,3)))
         print("np.ones((2,3)):\n", np.ones((2,3)))
+        print("np.full((2,3),7):", np.full((2,3),7))
         print("np.arange(5):", np.arange(5))
         print("np.linspace(0,1,5):", np.linspace(0,1,5))
         # identity matrix
@@ -76,8 +78,11 @@ class MatrixAnalyzer:
         """Compute and print mean, median, variance, std deviation."""
         print("=== Statistical operations ===")
         flat = self.matrix.flatten()
+        cor1 = np.array([1, 2, 3, 4, 5])
+        cor2 = np.array([1, 2, 3, 4, 5])
         print(f"Mean  : {np.mean(flat):.3f}")
         print(f"Median: {np.median(flat):.3f}")
+        print(f"Corrcoef: {np.corrcoef(cor1, cor2)}")
         print(f"Variance : {np.var(flat):.3f}")
         print(f"Std dev  : {np.std(flat):.3f}")
         print()

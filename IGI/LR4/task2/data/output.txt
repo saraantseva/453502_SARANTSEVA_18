@@ -1,11 +1,15 @@
-Total sentences: 15
-Declarative sentences: 10
-Interrogative sentences: 2
-Exclamatory sentences: 3
-Average sentence length (chars): 17.13
-Average word length (chars): 5.24
-Number of smileys: 6
-Arithmetic expressions: ['100 + 50', '200 - 75', '12 * 12', '100 / 4']
-Words with odd length: ['Как', 'У', 'отлично', 'Сегодня', 'хорошая', 'м', 'Обязательно', 'м', 'Это', 'будет', 'Я', 'люблю', 'Это', 'круто', 'Слово', 'слово', 'повторяется', 'повторяется', 'слова', 'и', 'и', 'Длинные', 'слова', 'и', 'иллюминация']
-Shortest word starting with 'i': 
-Duplicate words: ['и', 'м', 'на', 'повторяется', 'пойд', 'слова', 'слово', 'это']
+==================================================: 
+GENERAL ANALYSIS: 
+Total sentences: 23
+Declarative sentences: 14
+Interrogative sentences: 4
+Exclamatory sentences: 4
+Average sentence length (chars): 22.57
+Average word length (chars): 4.10
+Number of smileys: 8
+VARIANT 18 RESULTS: 
+Arithmetic expressions: ['2 + 3', '10 - 4', '5 * 6', '15 / 3', '-5 + 3', '10 - -2', '-2 * -3']
+Words with digits AND vowels: ['abc123', 'test456', 'hello789', 'python3', 'a1b2c3']
+Words with odd length: ['Hello', 'How', 'are', 'you', 'I', 'thank', 'you', 'Alice', 'Wow', 's', 'amazing', 'you', 'I', 'programming', 'Let', 's', 'numbers', 'are', 'smileys', 'The', 'weather', 'today', 'sunny', 'Yes', 'Interesting', 'i', 'i', 'i', 'happy', 'The', 'appears', 'twice', 'twice', 'Another', 'apple', 'apple', 'Short', 'i', 'words', 'i', 'i', 'words', 'interesting', 'important', 'hdf', 'has', 'abc', 'has', 'and', 'has', 'and', 'hello', 'has', 'and', 'has', 'and', 'c', 'd', 'has', 'and', 'a', 'b', 'c', 'has', 'and']
+Shortest word starting with 'i': I
+Duplicate words: ['am', 'and', 'apple', 'are', 'banana', 'c', 'digits', 'has', 'hello', 'here', 'i', 'interesting', 'is', 'it', 'love', 'name', 'python', 's', 'some', 'test', 'the', 'twice', 'vowels', 'word', 'words', 'you']
