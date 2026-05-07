@@ -43,9 +43,7 @@ class LoanDataAnalyzer:
             self.df['LoanAmount'] = self.df['LoanAmount'].clip(50, 600)
             print("Demo DataFrame created with 100 rows.")
 
-    # ------------------------------------------------------------------
-    # Basic info about DataFrame (as required)
-    # ------------------------------------------------------------------
+
     def dataframe_info(self):
         """Display comprehensive information about the DataFrame."""
         print("\n")
@@ -62,9 +60,6 @@ class LoanDataAnalyzer:
         print("\nMissing values per column:")
         print(self.df.isnull().sum())
 
-    # ------------------------------------------------------------------
-    # Task B: Compare average income for max vs min LoanAmount
-    # ------------------------------------------------------------------
     def compare_income_by_loan_extremes(self) -> float:
         """
         Calculate the ratio:
@@ -97,9 +92,7 @@ class LoanDataAnalyzer:
         print(f"Ratio (max/min): {ratio:.4f}")
         return round(ratio, 2)
 
-    # ------------------------------------------------------------------
-    # Additional statistical indexing (example: income vs loan amount correlation)
-    # ------------------------------------------------------------------
+
     def additional_stats(self):
         """Demonstrate other statistical operations."""
         print("\n")
@@ -107,24 +100,20 @@ class LoanDataAnalyzer:
         # Correlation between ApplicantIncome and LoanAmount
         corr = self.df['ApplicantIncome'].corr(self.df['LoanAmount'])
         print(f"Correlation between ApplicantIncome and LoanAmount: {corr:.4f}")
-
         # Group by Loan_Status (if exists) and show mean income
         if 'Loan_Status' in self.df.columns:
             print("\nMean ApplicantIncome by Loan_Status:")
             print(self.df.groupby('Loan_Status')['ApplicantIncome'].mean())
 
-    # ------------------------------------------------------------------
-    # Main method to run the required tasks
-    # ------------------------------------------------------------------
+
     def run_analysis(self):
         """Execute all required steps for part B."""
         self.dataframe_info()
         ratio = self.compare_income_by_loan_extremes()
-        print("\n" + "=" * 60)
+        print("\n" + "-" * 60)
         print(f"RESULT: The average income for borrowers with max loan is {ratio} times "
               f"higher than for borrowers with min loan.")
-        print("=" * 60)
-        self.additional_stats()
+        print("-" * 60)
 
 
 def task6_b():

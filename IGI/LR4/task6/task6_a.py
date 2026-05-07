@@ -7,9 +7,17 @@ Date: 2026-04-23
 """
 
 import pandas as pd
-import numpy as np
 import os
 
+
+'''
+    ApplicantIncome	    Зарплата заявителя (Основной доход) .
+    CoapplicantIncome	Доход созаёмщика (жены/мужа) .
+    LoanAmount	        Сумма кредита (которую просят) .
+    Loan_Amount_Term	Ha сколько месяцев берут кредит .
+    Credit_History      Есть ли запись o том, платил ли ты раньше по долгам 
+                            (1 — платил, 0 — не платил) .
+'''
 
 class PandasAnalyzer:
     """
@@ -41,14 +49,14 @@ class PandasAnalyzer:
             self.df = pd.DataFrame(data)
             print("Demo DataFrame created.")
 
-    # ------------------------------------------------------------------
-    # Series demonstrations (points 2,3,4,5)
-    # ------------------------------------------------------------------
-    def demonstrate_series(self):
+  
+    # Series demonstrations 
+    @staticmethod
+    def demonstrate_series():
         """Create Series, display, and access elements via .loc and .iloc."""
-        print("\n" + "=" * 60)
+        print("\n" + "-" * 60)
         print("2-5. Pandas Series: creation, display, .loc, .iloc")
-        print("=" * 60)
+        print("-" * 60)
 
         # Create Series from list
         incomes = [5000, 6000, 7500, 4200]
@@ -72,10 +80,10 @@ class PandasAnalyzer:
         print("\n5) Slicing .iloc[1:3]:")
         print(series_incomes.iloc[1:3])
 
-    # ------------------------------------------------------------------
-    # DataFrame from dictionary with custom index (task variant)
-    # ------------------------------------------------------------------
-    def create_dataframe_with_custom_index(self):
+   
+    # DataFrame from dictionary with custom index 
+    @staticmethod
+    def create_dataframe_with_custom_index():
         """Create a DataFrame from a dictionary and set specific index."""
         print("\n")
         print("6. Object DataFrame. Creation from dict with custom indices (variant 18)")
@@ -121,9 +129,9 @@ class PandasAnalyzer:
 
     def run_all(self):
         """Execute all demonstration methods in order."""
-        self.demonstrate_series()
-        self.create_dataframe_with_custom_index()
-        self.explore_dataset()
+        PandasAnalyzer.demonstrate_series()
+        PandasAnalyzer.create_dataframe_with_custom_index()
+        #self.explore_dataset()
 
 
 def task6_a():
