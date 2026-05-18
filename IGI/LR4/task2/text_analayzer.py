@@ -81,7 +81,7 @@ def task2():
     print(f"\nResults saved to {OUTPUT_FILE}")
 
     # Create zip archive
-    with zipfile.ZipFile(ZIP_FILE, 'w', zipfile.ZIP_DEFLATED) as zf:
+    with zipfile.ZipFile(ZIP_FILE, 'w', zipfile.ZIP_DEFLATED, compresslevel=2) as zf:
         zf.write(OUTPUT_FILE, arcname="output.txt")
 
     # Show archive info

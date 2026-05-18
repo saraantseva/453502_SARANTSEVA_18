@@ -66,7 +66,12 @@ class LoanDataAnalyzer:
         mean(ApplicantIncome where LoanAmount == max) /
         mean(ApplicantIncome where LoanAmount == min)
         Returns the ratio rounded to two decimal places.
+
+        во сколько раз средний доход (ApplicantIncome) заемщиков 
+            c максимальным размером кредита (LoanAmount = max) 
+            больше, чем y заемщиков c минимальным размером кредита. 
         """
+        
         # Find max and min LoanAmount
         max_loan = self.df['LoanAmount'].max()
         min_loan = self.df['LoanAmount'].min()

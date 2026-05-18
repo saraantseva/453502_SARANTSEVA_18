@@ -87,8 +87,6 @@ class Person:
         birth_date = cls.input_birth_date()
         return cls(surname, name, second_name, birth_date)
     
-
-    
     def get_full_name(self) -> str:
         """Return full name with initials"""
         name_init = self.name[0] if self.name else ""
