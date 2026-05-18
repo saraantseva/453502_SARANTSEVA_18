@@ -83,17 +83,6 @@ class TextAnalyzer:
         pattern = r'-?\d+(?:\.\d+)?\s*[+\-*/]\s*-?\d+(?:\.\d+)?'
         return re.findall(pattern, self.__text)
 
-    def find_words_with_digits_and_vowels(self) -> list:
-        """Words containing both digits and vowels"""
-        words = re.findall(r'[A-Za-zА-Яа-я0-9]+', self.__text)
-        result = []
-        for w in words:
-            has_digit = any(c.isdigit() for c in w)
-            has_vowel = any(c in self.VOWELS for c in w)
-            if has_digit and has_vowel:
-                result.append(w)
-        return result
-
     def odd_length_words(self) -> list:
         """Words with odd number of letters"""
         words = re.findall(r'[A-Za-zА-Яа-я]+', self.__text)
@@ -104,6 +93,17 @@ class TextAnalyzer:
         words = re.findall(r'[A-Za-zА-Яа-я]+', self.__text)
         i_words = [w for w in words if w.lower().startswith('i')]
         return min(i_words, key=len) if i_words else ""
+    
+    def find_words_with_digits_and_vowels(self) -> list:
+        """Words containing both digits and vowels"""
+        words = re.findall(r'[A-Za-zА-Яа-я0-9]+', self.__text)
+        result = []
+        for w in words:
+            has_digit = any(c.isdigit() for c in w)
+            has_vowel = any(c in self.VOWELS for c in w)
+            if has_digit and has_vowel:
+                result.append(w)
+        return result   
 
     def duplicate_words(self) -> list:
         """Duplicate words (case insensitive)"""

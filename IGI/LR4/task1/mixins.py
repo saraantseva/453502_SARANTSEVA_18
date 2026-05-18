@@ -13,7 +13,7 @@ import pickle
 class CSVMixin:
     """CSV saver - works with list of dicts"""
     
-    def save_to_csv(self, data: list, filename: str):
+    def save_to_csv(self, data, filename: str):
         """Save list of dicts to CSV"""
         if not data:
             return
@@ -37,7 +37,7 @@ class CSVMixin:
 class PickleMixin:
     """Pickle saver - works with list of dicts"""
     
-    def save_to_pickle(self, data: list, filename: str):
+    def save_to_pickle(self, data, filename: str):
         """Save list of dicts to Pickle"""
         with open(filename, 'wb') as f:
             pickle.dump(data, f)
