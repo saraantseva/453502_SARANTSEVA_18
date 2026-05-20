@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 import dj_database_url
 from pathlib import Path
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,11 +27,14 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-5t@841@!d1!98h
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-
+#DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = False
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com', 'service-center-w8ie.onrender.com',]
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.onrender.com',
+    'https://service-center-w8ie.onrender.com',
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -139,15 +141,12 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-# Если есть переменная DATABASE_URL (на сервере) — используем PostgreSQL
-if os.environ.get('DATABASE_URL'):
+
+# Если есть переменная DATABASE_URL (на сервере) — переключаемся на PostgreSQL
+database_url = os.environ.get('DATABASE_URL')
+if database_url:
     DATABASES['default'] = dj_database_url.config(
-        default=os.environ['DATABASE_URL'],
+        default=database_url,
         conn_max_age=600,
         conn_health_checks=True,
     )
-else:
-    DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
