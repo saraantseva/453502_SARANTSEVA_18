@@ -6,6 +6,7 @@ services:
     branch: IGI_LR5
     plan: free
     region: frankfurt
+    rootDir: IGI/LR5/service_center
     buildCommand: |
       pip install -r requirements.txt
       python manage.py migrate
