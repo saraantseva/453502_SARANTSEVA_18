@@ -1,15 +1,18 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block content %}
 <h1 class="page-title">О компании</h1>
 
 {% if company_info %}
 <div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 30px;">
-    {% if company_info.logo %}
-        <div style="flex-shrink: 0;">
+    <div style="flex-shrink: 0;">
+        {% if company_info.logo %}
             <img src="{{ company_info.logo.url }}" alt="Логотип" style="max-width: 150px; height: auto;">
-        </div>
-    {% endif %}
+        {% else %}
+            <img src="{% static 'company/default-logo.png' %}" alt="Логотип" style="max-width: 150px; height: auto;">
+        {% endif %}
+    </div>
     <div style="flex: 1;">
         <p>{{ company_info.text|linebreaks }}</p>
     </div>
