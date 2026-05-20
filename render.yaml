@@ -11,7 +11,6 @@ services:
       pip install -r requirements.txt
       python manage.py migrate
       python manage.py collectstatic --noinput
-      echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin123') if not User.objects.filter(username='admin').exists() else None" | python manage.py shell
     startCommand: gunicorn service_center.wsgi:application
     envVars:
       - key: DEBUG
@@ -23,7 +22,7 @@ services:
           name: service-center-db
           property: connectionString
 
-  - type: pserv
-    name: service-center-db
+databases:
+  - name: service-center-db
     plan: free
     region: frankfurt
