@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: service-center
+    runtime: python
+    repo: https://github.com/porphyriacus/453502_SARANTSEVA_18
+    branch: IGI_LR5
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py migrate
+      python manage.py collectstatic --noinput
+      echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin123') if not User.objects.filter(username='admin').exists() else None" | python manage.py shell
+    startCommand: gunicorn service_center.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: PYTHON_VERSION
+        value: 3.12.0
+
+  - type: postgresql
+    name: service-center-db
+    plan: free
