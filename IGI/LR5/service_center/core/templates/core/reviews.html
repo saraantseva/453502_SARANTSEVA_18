@@ -3,14 +3,24 @@
 {% block content %}
 <h1>Отзывы</h1>
 
-{% if user.is_authenticated and perms.core.can_add_review %}
-    <p><a href="{% url 'core:review_add' %}">+ Добавить отзыв</a></p>
+{% if user.is_authenticated %}
+    {% if perms.core.can_add_review %}
+        <p><a href="{% url 'core:review_add' %}" class="button">+ Добавить отзыв</a></p>
+    {% endif %}
+{% else %}
+    <p><a href="{% url 'login' %}" class="button">Войдите, чтобы оставить отзыв</a></p>
 {% endif %}
+
+<hr>
 
 {% if reviews %}
     {% for review in reviews %}
-        <div style="border-bottom: 1px solid #ccc; margin-bottom: 15px;">
-            <p><strong>{{ review.user.username }}</strong> ({{ review.rating }}★) – {{ review.created_at|date:"d/m/Y H:i" }}</p>
+        <div class="review-item" style="border-bottom: 1px solid #ccc; margin-bottom: 15px; padding-bottom: 10px;">
+            <p>
+                <strong>{{ review.user.username }}</strong> 
+                ({{ review.rating }}★) – 
+                {{ review.created_at|date:"d/m/Y H:i" }}
+            </p>
             <p>{{ review.text|linebreaks }}</p>
             {% if review.user == user and perms.core.can_edit_own_review %}
                 <p>

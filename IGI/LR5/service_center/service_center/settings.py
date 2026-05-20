@@ -49,7 +49,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'core.middleware.RequestLogMiddleware',
 ]
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 ROOT_URLCONF = 'service_center.urls'
 
@@ -70,6 +72,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'service_center.wsgi.application'
 
+# уровни логирования: DEBUG, INFO, WARNING, ERROR, CRITICAL
+LOG_LEVEL = 'INFO'  
+# если нужно отключить логирование в файлы (только консоль)
+LOG_TO_FILE = True
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
@@ -105,8 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

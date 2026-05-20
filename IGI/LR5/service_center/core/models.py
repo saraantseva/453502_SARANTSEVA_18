@@ -1,8 +1,6 @@
 from django.db import models
 from django.urls import reverse
-
 from django.contrib.auth.models import User
-
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator, MinValueValidator, MaxValueValidator
 
@@ -54,10 +52,6 @@ class Client(models.Model):
     def __str__(self):
         """Строковое представление"""
         return "Клиент: " + self.full_name
-    
-    def get_absolute_url(self):
-        """URL для просмотра клиента"""
-        return reverse('client_detail', args=[str(self.id)])
     
     @property
     def age(self):
@@ -164,10 +158,6 @@ class Employee(models.Model):
         """Строковое представление"""
         return "Сотрудник: " + self.full_name 
     
-    def get_absolute_url(self):
-        """URL для просмотра сотрудника"""
-        return reverse('employee_detail', args=[str(self.id)])
-    
     @property
     def age(self):
         """Вычисление возраста"""
@@ -268,7 +258,7 @@ class Service(models.Model):
  
     
     def __str__(self):
-        return f"{self.name} - {self.price} y.e."
+        return f"{self.name} - {self.price:.2f} y.e."
     
     class Meta:
         verbose_name_plural = "Услуги"
@@ -301,7 +291,7 @@ class SparePart(models.Model):
     quantity_in_stock = models.IntegerField(default=0)
     
     def __str__(self):
-        return f"{self.name} - {self.price} руб. (в наличии: {self.quantity_in_stock})"
+        return f"{self.name} - {self.price:.2f} руб. (в наличии: {self.quantity_in_stock})"
     
     class Meta:
         verbose_name_plural = "Запчасти"
@@ -350,7 +340,12 @@ class Order(models.Model):
         related_name='orders',
         verbose_name="Клиент"
     )
-    
+
+    address = models.TextField(
+        blank=True, 
+        verbose_name="Адрес"
+    )
+
     # Устройство (одно устройство - один заказ)
     device = models.OneToOneField(
         'Device',
@@ -465,6 +460,12 @@ class Order(models.Model):
         self.discount_amount = self.calculate_discount()
         super().save(update_fields=['total_cost', 'discount_amount'])
 
+    def get_address(self):
+        """Возвращает адрес заказа или адрес клиента, если адрес заказа пустой"""
+        if self.address:
+            return self.address
+        return self.client.address
+
     def save(self, *args, **kwargs):
         # Если номер не указан, сгенерировать автоматически
         if not self.order_number:
@@ -481,7 +482,8 @@ class Order(models.Model):
                 new_num = 1
             
             self.order_number = f'SC-{year}-{new_num:04d}'
-        
+        if not self.address and self.client and self.client.address:
+            self.address = self.client.address
         # Сохраняем сначала (чтобы появился pk)
         super().save(*args, **kwargs)
         
@@ -693,7 +695,7 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Отзыв от {self.user.username} — {self.rating}★"
-
+    
     class Meta:
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"

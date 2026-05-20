@@ -228,7 +228,10 @@
     <div class="user-bar">
         {% if user.is_authenticated %}
             <span>{{ user.username }}</span>
-            {% if user.employee %}
+            {% if user.is_superuser %}
+                <a href="{% url 'core:admin_orders' %}">Управление заказами</a>
+                <a href="/admin/">Админ-панель</a>
+            {% elif user.employee %}
                 <a href="{% url 'core:master_dashboard' %}">Личный кабинет</a>
             {% elif user.client %}
                 <a href="{% url 'core:client_dashboard' %}">Личный кабинет</a>
@@ -258,6 +261,9 @@
             <a href="{% url 'core:vacancies' %}">Вакансии</a>
             <a href="{% url 'core:reviews' %}">Отзывы</a>
             <a href="{% url 'core:promocodes' %}">Промокоды</a>
+            {% if user.is_superuser %}
+                <a href="{% url 'core:statistics' %}">Статистика</a>
+            {% endif %}
         </div>
     </div>
     <div class="main">
