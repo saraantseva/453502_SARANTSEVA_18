@@ -1,0 +1,30 @@
+2026-05-20 21:48:04 | INFO | user_actions | Client permissions assigned to user testuser (Client ID: 1)
+2026-05-20 21:48:04 | INFO | user_actions | Client permissions assigned to user testuser (Client ID: 1)
+2026-05-20 21:48:04 | INFO | user_actions | Client permissions assigned to user testuser (Client ID: 1)
+2026-05-20 21:48:04 | INFO | user_actions | Master permissions assigned to user testuser (Employee ID: 1)
+2026-05-20 21:48:04 | INFO | user_actions | Master permissions assigned to user testuser (Employee ID: 1)
+2026-05-20 21:48:04 | INFO | user_actions | Master permissions assigned to user testuser (Employee ID: 1)
+2026-05-20 21:48:04 | INFO | user_actions | Client permissions assigned to user client_signal (Client ID: 1)
+2026-05-20 21:48:04 | INFO | user_actions | Client permissions assigned to user client_signal (Client ID: 1)
+2026-05-20 21:48:04 | INFO | user_actions | Client permissions assigned to user client_signal (Client ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Master permissions assigned to user master_signal (Employee ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Master permissions assigned to user master_signal (Employee ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Master permissions assigned to user master_signal (Employee ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Client permissions assigned to user stat (Client ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Client permissions assigned to user stat (Client ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Client permissions assigned to user stat (Client ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Client permissions assigned to user user (Client ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Client permissions assigned to user user (Client ID: 1)
+2026-05-20 21:48:05 | INFO | user_actions | Client permissions assigned to user user (Client ID: 1)
+2026-05-20 21:48:06 | INFO | user_actions | Master permissions assigned to user master (Employee ID: 1)
+2026-05-20 21:48:06 | INFO | user_actions | Master permissions assigned to user master (Employee ID: 1)
+2026-05-20 21:48:06 | INFO | user_actions | Master permissions assigned to user master (Employee ID: 1)
+2026-05-20 21:48:09 | INFO | user_actions | Client user created order #SC-2026-0002
+2026-05-20 21:48:09 | INFO | user_actions | Client user created order #SC-2026-0002
+2026-05-20 21:48:09 | INFO | user_actions | Client user created order #SC-2026-0002
+2026-05-20 21:48:12 | INFO | user_actions | User user added a review (rating: 5)
+2026-05-20 21:48:12 | INFO | user_actions | User user added a review (rating: 5)
+2026-05-20 21:48:12 | INFO | user_actions | User user added a review (rating: 5)
+2026-05-20 21:48:13 | INFO | user_actions | User user deleted review #None
+2026-05-20 21:48:13 | INFO | user_actions | User user deleted review #None
+2026-05-20 21:48:13 | INFO | user_actions | User user deleted review #None

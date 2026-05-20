@@ -30,5 +30,20 @@
         <p>Новостей пока нет. Скоро появятся!</p>
     </div>
 {% endif %}
+{% if nasa_apod %}
+<div>
+    <h3>{{ nasa_apod.title }}</h3>
+    {% if nasa_apod.url %}
+        <img src="{{ nasa_apod.url }}" alt="{{ nasa_apod.title }}">
+    {% endif %}
+    <p>{{ nasa_apod.explanation }}</p>
+    <p>Источник: NASA Astronomy Picture of the Day</p>
+</div>
+{% endif %}
+{% if tech_news %}
+<div>
+    <p><strong>📰 Из мира технологий:</strong> {{ tech_news }}</p>
+</div>
+{% endif %}
 
 {% endblock %}

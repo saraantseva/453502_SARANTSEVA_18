@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>Создание нового заказа</h1>
+
+<div style="margin-bottom: 20px;">
+    <a href="{% url 'core:admin_orders' %}">← Назад к списку заказов</a>
+</div>
+
+<div style="background: white; padding: 25px; border-radius: 8px; border: 1px solid #ddd;">
+    <form method="post">
+        {% csrf_token %}
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div><label>Клиент *</label> {{ form.client }}</div>
+            <div><label>Устройство *</label> {{ form.device }}</div>
+        </div>
+        
+        <div><label>Ответственный мастер</label> {{ form.employee }}</div>
+        <div><label>Статус</label> {{ form.status }}</div>
+        <div><label>Описание проблемы</label> {{ form.client_problem }}</div>
+        
+        <!-- Адрес с Яндекс подсказками -->
+        <div>
+            <label>Адрес</label>
+            <input type="text" name="address" id="id_address" class="form-control" placeholder="Начните вводить адрес">
+            <small>Если не указан, будет использован адрес клиента</small>
+        </div>
+        
+        <div><label>Дата завершения (план)</label> {{ form.completion_date }}</div>
+        
+        <div>
+            <button type="submit">Создать заказ</button>
+            <a href="{% url 'core:admin_orders' %}">Отмена</a>
+        </div>
+    </form>
+</div>
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=51395f23-66c3-4ccb-943e-4a0f85025ac4&suggest_apikey=5f6076ec-8ddf-42fa-8887-ba9a213c6c8b"></script>
+
+{% endblock %}
