@@ -7,6 +7,7 @@ from django.conf import settings
 log_dir = os.path.join(settings.BASE_DIR, 'logs')
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
+    
 def setup_logging():
     """
     Настройка логирования с уровнем из конфигурации приложения
