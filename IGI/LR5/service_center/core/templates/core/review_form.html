@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>{% if form.instance.id %}Редактировать отзыв{% else %}Новый отзыв{% endif %}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+    <a href="{% url 'core:reviews' %}">Отмена</a>
+</form>
+{% endblock %}

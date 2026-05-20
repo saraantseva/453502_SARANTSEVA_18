@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="page-title">Добро пожаловать в Сервисный центр</h1>
+
+<p>Профессиональный ремонт компьютерной техники и периферийных устройств.</p>
+
+<hr>
+
+{% if last_news %}
+    <div class="card">
+        <h3>Последняя новость</h3>
+        <h4>{{ last_news.title }}</h4>
+        <p style="color: #888; font-size: 0.85rem;">{{ last_news.created_at|date:"d/m/Y" }}</p>
+        
+        <!-- ФОТО НА ГЛАВНОЙ -->
+        {% if last_news.image %}
+            <img src="{{ last_news.image.url }}" alt="{{ last_news.title }}" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 4px; margin: 10px 0;">
+        {% endif %}
+        
+        <p>{{ last_news.short_description }}</p>
+        
+        <!-- КНОПКА НИЖЕ -->
+        <div style="margin-top: 15px;">
+            <a href="{% url 'core:news_detail' last_news.id %}" class="button">Читать далее →</a>
+        </div>
+    </div>
+{% else %}
+    <div class="card">
+        <p>Новостей пока нет. Скоро появятся!</p>
+    </div>
+{% endif %}
+
+{% endblock %}
