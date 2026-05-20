@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="page-title">Контакты</h1>
+
+{% if employees %}
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        {% for employee in employees %}
+            <div class="card" style="width: 300px;">
+                {% if employee.photo %}
+                    <img src="{{ employee.photo.url }}" alt="{{ employee.full_name }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                {% endif %}
+                <h3>{{ employee.full_name }}</h3>
+                <p><strong>Специализации:</strong><br>
+                    {% for spec in employee.specialization.all %}
+                        • {{ spec.name }}{% if not forloop.last %}<br>{% endif %}
+                    {% empty %}<em>Не указаны</em>{% endfor %}
+                </p>
+                <p><strong>Телефон:</strong> {{ employee.phone }}</p>
+                <div style="margin-top: 10px; font-size: 0.7rem; color: #888; border-top: 1px solid #e2e8f0; padding-top: 8px;">
+                    <p>Дата регистрации (UTC): {{ employee.created_at|date:"d/m/Y H:i" }}</p>
+                    <p>Дата регистрации (ваш часовой пояс): {{ employee.created_at|date:"d/m/Y H:i" }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="card"><p>Сотрудников пока нет.</p></div>
+{% endif %}
+
+{% endblock %}

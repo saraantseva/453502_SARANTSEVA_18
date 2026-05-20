@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="page-title">Промокоды и купоны</h1>
+
+<h3>Действующие</h3>
+{% if active_promocodes %}
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px;">
+        {% for promocode in active_promocodes %}
+            <div class="card" style="width: 250px; text-align: center;">
+                <h3 style="color: #e94560;">{{ promocode.code }}</h3>
+                <p>Скидка: <strong>{{ promocode.discount_percent }}%</strong></p>
+                {% if promocode.expires_at %}<p>До: {{ promocode.expires_at|date:"d/m/Y" }}</p>{% endif %}
+                <div style="margin-top: 10px; font-size: 0.7rem; color: #888; border-top: 1px solid #e2e8f0; padding-top: 8px;">
+                    <p>Создан (UTC): {{ promocode.created_at|date:"d/m/Y H:i" }}</p>
+                    <p>Создан (ваш часовой пояс): {{ promocode.created_at|date:"d/m/Y H:i" }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>Активных промокодов нет.</p>
+{% endif %}
+
+<h3>Архивные</h3>
+{% if archived_promocodes %}
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        {% for promocode in archived_promocodes %}
+            <div class="card" style="width: 250px; text-align: center; opacity: 0.6;">
+                <h3>{{ promocode.code }}</h3>
+                <p>Скидка: {{ promocode.discount_percent }}%</p>
+                {% if promocode.expires_at %}<p>До: {{ promocode.expires_at|date:"d/m/Y" }}</p>{% endif %}
+                <div style="margin-top: 10px; font-size: 0.7rem; color: #888; border-top: 1px solid #e2e8f0; padding-top: 8px;">
+                    <p>Создан (UTC): {{ promocode.created_at|date:"d/m/Y H:i" }}</p>
+                    <p>Создан (ваш часовой пояс): {{ promocode.created_at|date:"d/m/Y H:i" }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>Архивных промокодов нет.</p>
+{% endif %}
+
+{% endblock %}

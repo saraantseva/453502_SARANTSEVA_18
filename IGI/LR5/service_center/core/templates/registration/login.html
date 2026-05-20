@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="page-title">Вход</h1>
+<div class="card">
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div style="margin-bottom: 15px;">
+                <label>{{ field.label }} 
+                    {% if field.field.required %}<span style="color: #e94560;">*</span>{% endif %}
+                </label>
+                {{ field }}
+                {% if field.errors %}
+                    <div style="color: red; font-size: 0.8rem;">{{ field.errors }}</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        <button type="submit" class="button">Войти</button>
+    </form>
+    <p>Нет аккаунта? <a href="{% url 'core:register' %}">Зарегистрироваться</a></p>
+</div>
+{% endblock %}

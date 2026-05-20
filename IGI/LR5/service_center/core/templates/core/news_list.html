@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="page-title">Новости</h1>
+
+{% if news_list %}
+    {% for news in news_list %}
+        <div class="card" style="display: flex; gap: 20px; align-items: flex-start;">
+            {% if news.image %}
+                <img src="{{ news.image.url }}" alt="{{ news.title }}" style="width: 120px; height: 90px; object-fit: cover; border-radius: 4px;">
+            {% endif %}
+            <div style="flex: 1;">
+                <h3>{{ news.title }}</h3>
+                <p style="color: #888; font-size: 0.85rem;">{{ news.created_at|date:"d/m/Y H:i" }}</p>
+                <p>{{ news.short_description }}</p>
+                <div style="margin-top: 10px;">
+                    <a href="{% url 'core:news_detail' news.id %}" class="button">Читать далее →</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="card"><p>Новостей пока нет.</p></div>
+{% endif %}
+
+{% endblock %}
