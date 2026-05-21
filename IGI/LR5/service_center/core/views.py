@@ -506,6 +506,7 @@ def client_add_items(request, order_id):
             promocode = Promocode.objects.get(code=code, is_active=True)
             if not order.promocode:
                 order.promocode = promocode
+                order.save()
                 order.update_total_cost()
                 user_logger.info(f"Client {request.user.username} applied promo code '{code}' to order #{order.order_number}")
                 promo_message = f'Промокод {code} применён! Скидка {promocode.discount_percent}%'
