@@ -96,12 +96,24 @@ def news_detail(request, pk):
 
 def glossary(request):
     context = get_timezone_context()
-    context['terms'] = Glossary.objects.all().order_by('-created_at')
+    terms = Glossary.objects.all().order_by('-created_at')
+    
+    for term in terms:
+        term.created_utc = term.created_at.strftime('%d/%m/%Y %H:%M')
+        term.created_local = utc_to_local(term.created_at).strftime('%d/%m/%Y %H:%M')
+    
+    context['terms'] = terms
     return render(request, 'core/glossary.html', context)
 
 def contacts(request):
     context = get_timezone_context()
-    context['employees'] = Employee.objects.all()
+    employees = Employee.objects.all()
+    
+    for employee in employees:
+        employee.created_utc = employee.created_at.strftime('%d/%m/%Y %H:%M')
+        employee.created_local = utc_to_local(employee.created_at).strftime('%d/%m/%Y %H:%M')
+    
+    context['employees'] = employees
     return render(request, 'core/contacts.html', context)
 
 def privacy(request):
@@ -110,7 +122,13 @@ def privacy(request):
 
 def vacancies(request):
     context = get_timezone_context()
-    context['vacancies'] = Vacancy.objects.filter(is_active=True)
+    vacancies_list = Vacancy.objects.filter(is_active=True)
+    
+    for vacancy in vacancies_list:
+        vacancy.created_utc = vacancy.created_at.strftime('%d/%m/%Y %H:%M')
+        vacancy.created_local = utc_to_local(vacancy.created_at).strftime('%d/%m/%Y %H:%M')
+    
+    context['vacancies'] = vacancies_list
     return render(request, 'core/vacancies.html', context)
 
 def promocodes(request):
