@@ -9,8 +9,8 @@
             <h3>{{ term.term }}</h3>
             <p>{{ term.definition|linebreaks }}</p>
             <div style="margin-top: 10px; font-size: 0.7rem; color: #888; border-top: 1px solid #e2e8f0; padding-top: 8px;">
-                <p>Дата добавления (UTC): {{ term.created_at|date:"d/m/Y H:i" }}</p>
-                <p>Дата добавления (ваш часовой пояс): {{ term.created_at|date:"d/m/Y H:i" }}</p>
+                <p>Дата добавления (UTC): {{ term.created_utc }}</p>
+                <p>Дата добавления (ваш часовой пояс): {{ term.created_local }}</p>
             </div>
         </div>
     {% endfor %}
