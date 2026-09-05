@@ -2,6 +2,8 @@
 import time
 import logging
 from .logger_config import setup_logging
+from django.utils import timezone
+import pytz
 
 # Инициализируем логгер
 loggers = setup_logging()
@@ -40,3 +42,17 @@ class RequestLogMiddleware:
         debug_logger.debug(f"USER: {request.user.username if request.user.is_authenticated else 'Anonymous'}")
         
         return response
+    
+class TimezoneMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        # Получаем таймзону из сессии (или профиля пользователя)
+        tzname = request.session.get('django_timezone')
+        if tzname:
+            timezone.activate(pytz.timezone(tzname))
+        else:
+            # Если таймзона не выбрана — деактивируем (будет UTC)
+            timezone.deactivate()
+        return self.get_response(request)

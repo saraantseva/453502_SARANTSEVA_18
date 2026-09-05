@@ -28,7 +28,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-5t@841@!d1!98h
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 #DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-DEBUG = False
+DEBUG = True #False
+
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com', 'service-center-w8ie.onrender.com',]
 CSRF_TRUSTED_ORIGINS = [
@@ -91,7 +92,7 @@ LOG_TO_FILE = True
 
 
 USE_TZ = True
-TIME_ZONE = 'Europe/Minsk'
+TIME_ZONE = 'UTC'
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
