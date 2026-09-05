@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сервисный центр</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f7fa;
+            color: #1a2a3a;
+            line-height: 1.5;
+        }
+        
+        /* Верхняя панель */
+        .user-bar {
+            background-color: #1e2a3a;
+            color: #8ba0b0;
+            padding: 0.5rem 2rem;
+            text-align: right;
+            font-size: 0.85rem;
+        }
+        
+        .user-bar a {
+            color: #8ba0b0;
+            margin-left: 1rem;
+            text-decoration: none;
+        }
+        
+        .user-bar a:hover {
+            color: #e94560;
+        }
+        
+        .logout-btn {
+            background: none;
+            border: none;
+            color: #8ba0b0;
+            margin-left: 1rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-family: inherit;
+        }
+        
+        .logout-btn:hover {
+            color: #e94560;
+        }
+        
+        /* Шапка */
+        .header {
+            background-color: #ffffff;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1e2a3a;
+        }
+        
+        .header p {
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+        
+        /* Навигация */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            padding: 0.75rem 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-container a {
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .nav-container a:hover {
+            color: #e94560;
+        }
+        
+        /* Контент */
+        .main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            min-height: 60vh;
+        }
+        
+        /* Подвал */
+        .footer {
+            background-color: #1e2a3a;
+            color: #8ba0b0;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        /* Заголовки */
+        .page-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #1e2a3a;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Карточки */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 1rem 0;
+        }
+        
+        a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        button, .button {
+            background-color: #e94560;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        button:hover, .button:hover {
+            background-color: #d43a54;
+        }
+        
+        /* Формы */
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 0.6rem;
+            margin-top: 0.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        
+        form label {
+            font-weight: 500;
+            color: #1e2a3a;
+        }
+        
+        .required-star {
+            color: #e94560;
+        }
+        
+        .errorlist {
+            color: #e94560;
+            list-style: none;
+            margin-top: -0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+        }
+        
+        .footer-datetime {
+            margin-top: 8px;
+            font-size: 0.7rem;
+            border-top: 1px solid rgba(139, 160, 176, 0.3);
+            padding-top: 8px;
+        }
+        
+        .footer-calendar {
+            text-align: center;
+            margin-top: 6px;
+        }
+        
+        .footer-calendar strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .footer-calendar pre {
+            margin: 0;
+            font-family: monospace;
+            font-size: 0.7rem;
+            line-height: 1.3;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="user-bar">
+        {% if user.is_authenticated %}
+            <span>{{ user.username }}</span>
+            {% if user.is_superuser %}
+                <a href="{% url 'core:admin_orders' %}">Управление заказами</a>
+                <a href="/admin/">Админ-панель</a>
+            {% elif user.employee %}
+                <a href="{% url 'core:master_dashboard' %}">Личный кабинет</a>
+            {% elif user.client %}
+                <a href="{% url 'core:client_dashboard' %}">Личный кабинет</a>
+            {% endif %}
+            <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="logout-btn">Выйти</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">Войти</a>
+            <a href="{% url 'core:register' %}">Регистрация</a>
+        {% endif %}
+    </div>
+    <div class="header">
+        <h1>Сервисный центр</h1>
+        <p>Ремонт компьютерной техники и периферийных устройств</p>
+    </div>
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="{% url 'core:home' %}">Главная</a>
+            <a href="{% url 'core:about' %}">О компании</a>
+            <a href="{% url 'core:news_list' %}">Новости</a>
+            <a href="{% url 'core:service_list' %}">Услуги</a>
+            <a href="{% url 'core:glossary' %}">Клиентам</a>
+            <a href="{% url 'core:contacts' %}">Контакты</a>
+            <a href="{% url 'core:privacy' %}">Политика</a>
+            <a href="{% url 'core:vacancies' %}">Вакансии</a>
+            <a href="{% url 'core:reviews' %}">Отзывы</a>
+            <a href="{% url 'core:promocodes' %}">Промокоды</a>
+            {% if user.is_superuser %}
+                <a href="{% url 'core:statistics' %}">Статистика</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="main">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+        <p>© 2026 Сервисный центр. Минск, улица Примерная, 123</p>
+        <p>Тел.: +375 (29) 123-45-67</p>
+        <div class="footer-datetime">
+            <p><strong>Часовой пояс:</strong> {{ user_timezone }}</p>
+            <p><strong>Текущее время:</strong> {{ current_user_time }}</p>
+            <p><strong>UTC:</strong> {{ current_utc_time }}</p>
+            <div class="footer-calendar">
+                <strong>{{ calendar_month }}</strong>
+                <pre>{{ calendar_text }}</pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

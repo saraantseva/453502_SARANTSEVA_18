@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load tz %}
+
+{% block content %}
+<h1>Заказ №{{ order.order_number }} оформлен</h1>
+
+<p><strong>Статус:</strong> {{ order.get_status_display }}</p>
+<p><strong>Создан:</strong> {{ order.created_at|localtime|date:"d/m/Y H:i" }}</p>
+
+<h3>Услуги</h3>
+<ul>
+    {% for item in services %}
+        <li>{{ item.service.name }} x{{ item.quantity }} = {{ item.price_at_time }} руб.</li>
+    {% empty %}
+        <li>Нет услуг</li>
+    {% endfor %}
+</ul>
+
+<h3>Запчасти</h3>
+<ul>
+    {% for item in spare_parts %}
+        <li>{{ item.spare_part.name }} x{{ item.quantity }} = {{ item.price_at_time }} руб.</li>
+    {% empty %}
+        <li>Нет запчастей</li>
+    {% endfor %}
+</ul>
+
+<hr>
+<p><strong>Стоимость:</strong> {{ order.total_cost }} руб.</p>
+{% if discount %}
+    <p><strong>Скидка {{ discount }}%:</strong> -{{ discount }}%</p>
+    <p><strong>Итого к оплате:</strong> {{ total_with_discount }} руб.</p>
+{% endif %}
+
+<p><a href="{% url 'core:client_dashboard' %}">Вернуться в личный кабинет</a></p>
+{% endblock %}

@@ -1,0 +1,894 @@
+2026-05-20 21:48:06 | DEBUG | debug | REQUEST: GET /about/
+2026-05-20 21:48:06 | DEBUG | debug | REQUEST: GET /about/
+2026-05-20 21:48:06 | DEBUG | debug | REQUEST: GET /about/
+2026-05-20 21:48:06 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:06 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:06 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/order/create/
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/order/create/
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/order/create/
+2026-05-20 21:48:07 | DEBUG | debug | USER: admin
+2026-05-20 21:48:07 | DEBUG | debug | USER: admin
+2026-05-20 21:48:07 | DEBUG | debug | USER: admin
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/order/1/
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/order/1/
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/order/1/
+2026-05-20 21:48:07 | DEBUG | debug | USER: admin
+2026-05-20 21:48:07 | DEBUG | debug | USER: admin
+2026-05-20 21:48:07 | DEBUG | debug | USER: admin
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-20 21:48:07 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-20 21:48:07 | DEBUG | debug | USER: user
+2026-05-20 21:48:07 | DEBUG | debug | USER: user
+2026-05-20 21:48:07 | DEBUG | debug | USER: user
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-20 21:48:08 | DEBUG | debug | USER: admin
+2026-05-20 21:48:08 | DEBUG | debug | USER: admin
+2026-05-20 21:48:08 | DEBUG | debug | USER: admin
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /client/order/1/add/
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /client/order/1/add/
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /client/order/1/add/
+2026-05-20 21:48:08 | DEBUG | debug | USER: user
+2026-05-20 21:48:08 | DEBUG | debug | USER: user
+2026-05-20 21:48:08 | DEBUG | debug | USER: user
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /client/order/create/
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /client/order/create/
+2026-05-20 21:48:08 | DEBUG | debug | REQUEST: GET /client/order/create/
+2026-05-20 21:48:08 | DEBUG | debug | USER: user
+2026-05-20 21:48:08 | DEBUG | debug | USER: user
+2026-05-20 21:48:08 | DEBUG | debug | USER: user
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: POST /client/order/create/
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: POST /client/order/create/
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: POST /client/order/create/
+2026-05-20 21:48:09 | DEBUG | debug | USER: user
+2026-05-20 21:48:09 | DEBUG | debug | USER: user
+2026-05-20 21:48:09 | DEBUG | debug | USER: user
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: GET /client/
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: GET /client/
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: GET /client/
+2026-05-20 21:48:09 | DEBUG | debug | USER: user
+2026-05-20 21:48:09 | DEBUG | debug | USER: user
+2026-05-20 21:48:09 | DEBUG | debug | USER: user
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: GET /client/
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: GET /client/
+2026-05-20 21:48:09 | DEBUG | debug | REQUEST: GET /client/
+2026-05-20 21:48:09 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:09 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:09 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /client/order/1/summary/
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /client/order/1/summary/
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /client/order/1/summary/
+2026-05-20 21:48:10 | DEBUG | debug | USER: user
+2026-05-20 21:48:10 | DEBUG | debug | USER: user
+2026-05-20 21:48:10 | DEBUG | debug | USER: user
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-20 21:48:10 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:10 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:10 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /glossary/
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /glossary/
+2026-05-20 21:48:10 | DEBUG | debug | REQUEST: GET /glossary/
+2026-05-20 21:48:10 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:10 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:10 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/
+2026-05-20 21:48:11 | DEBUG | debug | USER: master
+2026-05-20 21:48:11 | DEBUG | debug | USER: master
+2026-05-20 21:48:11 | DEBUG | debug | USER: master
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/order/1/edit/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/order/1/edit/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /master/order/1/edit/
+2026-05-20 21:48:11 | DEBUG | debug | USER: master
+2026-05-20 21:48:11 | DEBUG | debug | USER: master
+2026-05-20 21:48:11 | DEBUG | debug | USER: master
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /news/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /news/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /news/
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /register/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /register/
+2026-05-20 21:48:11 | DEBUG | debug | REQUEST: GET /register/
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:11 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:12 | DEBUG | debug | REQUEST: GET /reviews/add/
+2026-05-20 21:48:12 | DEBUG | debug | REQUEST: GET /reviews/add/
+2026-05-20 21:48:12 | DEBUG | debug | REQUEST: GET /reviews/add/
+2026-05-20 21:48:12 | DEBUG | debug | USER: user
+2026-05-20 21:48:12 | DEBUG | debug | USER: user
+2026-05-20 21:48:12 | DEBUG | debug | USER: user
+2026-05-20 21:48:12 | DEBUG | debug | REQUEST: POST /reviews/add/
+2026-05-20 21:48:12 | DEBUG | debug | REQUEST: POST /reviews/add/
+2026-05-20 21:48:12 | DEBUG | debug | REQUEST: POST /reviews/add/
+2026-05-20 21:48:12 | DEBUG | debug | USER: user
+2026-05-20 21:48:12 | DEBUG | debug | USER: user
+2026-05-20 21:48:12 | DEBUG | debug | USER: user
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: POST /reviews/1/delete/
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: POST /reviews/1/delete/
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: POST /reviews/1/delete/
+2026-05-20 21:48:13 | DEBUG | debug | USER: user
+2026-05-20 21:48:13 | DEBUG | debug | USER: user
+2026-05-20 21:48:13 | DEBUG | debug | USER: user
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /reviews/1/edit/
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /reviews/1/edit/
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /reviews/1/edit/
+2026-05-20 21:48:13 | DEBUG | debug | USER: user
+2026-05-20 21:48:13 | DEBUG | debug | USER: user
+2026-05-20 21:48:13 | DEBUG | debug | USER: user
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /reviews/
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /reviews/
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /reviews/
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?type=1
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?type=1
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?type=1
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?search=%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B0
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?search=%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B0
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?search=%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B0
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?sort=price_asc
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?sort=price_asc
+2026-05-20 21:48:13 | DEBUG | debug | REQUEST: GET /services/?sort=price_asc
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:13 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:15 | DEBUG | debug | USER: user
+2026-05-20 21:48:15 | DEBUG | debug | USER: user
+2026-05-20 21:48:15 | DEBUG | debug | USER: user
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:15 | DEBUG | debug | USER: admin
+2026-05-20 21:48:15 | DEBUG | debug | USER: admin
+2026-05-20 21:48:15 | DEBUG | debug | USER: admin
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /vacancies/
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /vacancies/
+2026-05-20 21:48:15 | DEBUG | debug | REQUEST: GET /vacancies/
+2026-05-20 21:48:15 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:15 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:15 | DEBUG | debug | USER: Anonymous
+2026-05-20 21:48:50 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:50 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:50 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-20 21:48:50 | DEBUG | debug | USER: daria
+2026-05-20 21:48:50 | DEBUG | debug | USER: daria
+2026-05-20 21:48:50 | DEBUG | debug | USER: daria
+2026-05-20 21:48:55 | DEBUG | debug | REQUEST: GET /
+2026-05-20 21:48:55 | DEBUG | debug | REQUEST: GET /
+2026-05-20 21:48:55 | DEBUG | debug | REQUEST: GET /
+2026-05-20 21:48:55 | DEBUG | debug | USER: daria
+2026-05-20 21:48:55 | DEBUG | debug | USER: daria
+2026-05-20 21:48:55 | DEBUG | debug | USER: daria
+2026-05-20 22:52:29 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:52:29 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:52:29 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:52:29 | DEBUG | debug | USER: daria
+2026-05-20 22:52:29 | DEBUG | debug | USER: daria
+2026-05-20 22:52:29 | DEBUG | debug | USER: daria
+2026-05-20 22:52:33 | DEBUG | debug | REQUEST: POST /accounts/logout/
+2026-05-20 22:52:33 | DEBUG | debug | REQUEST: POST /accounts/logout/
+2026-05-20 22:52:33 | DEBUG | debug | REQUEST: POST /accounts/logout/
+2026-05-20 22:52:33 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:33 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:33 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:34 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:52:34 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:52:34 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:52:34 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:34 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:34 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:36 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-20 22:52:36 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-20 22:52:36 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-20 22:52:36 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:36 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:36 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:57 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:52:57 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:52:57 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:52:57 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:57 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:52:57 | DEBUG | debug | USER: Anonymous
+2026-05-20 22:53:06 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:53:06 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:53:06 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:53:06 | DEBUG | debug | USER: koolchel
+2026-05-20 22:53:06 | DEBUG | debug | USER: koolchel
+2026-05-20 22:53:06 | DEBUG | debug | USER: koolchel
+2026-05-20 22:53:07 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:53:07 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:53:07 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-20 22:53:07 | DEBUG | debug | USER: koolchel
+2026-05-20 22:53:07 | DEBUG | debug | USER: koolchel
+2026-05-20 22:53:07 | DEBUG | debug | USER: koolchel
+2026-05-20 22:53:08 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:53:08 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:53:08 | DEBUG | debug | REQUEST: GET /
+2026-05-20 22:53:08 | DEBUG | debug | USER: koolchel
+2026-05-20 22:53:08 | DEBUG | debug | USER: koolchel
+2026-05-20 22:53:08 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:08 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:25:08 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:25:08 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:25:08 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:08 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:08 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:09 | DEBUG | debug | REQUEST: GET /favicon.ico
+2026-05-21 08:25:09 | DEBUG | debug | REQUEST: GET /favicon.ico
+2026-05-21 08:25:09 | DEBUG | debug | REQUEST: GET /favicon.ico
+2026-05-21 08:25:09 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:09 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:09 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:11 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:25:11 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:25:11 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:25:11 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:11 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:11 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:11 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47.png
+2026-05-21 08:25:11 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47.png
+2026-05-21 08:25:11 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47.png
+2026-05-21 08:25:11 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:11 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:11 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:41 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-21 08:25:41 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-21 08:25:41 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-21 08:25:41 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:41 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:41 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:42 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:25:42 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:25:42 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:25:42 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:42 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:42 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:45 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 08:25:45 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 08:25:45 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 08:25:45 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:45 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:45 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:45 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 08:25:45 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 08:25:45 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 08:25:45 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:45 | DEBUG | debug | USER: koolchel
+2026-05-21 08:25:45 | DEBUG | debug | USER: koolchel
+2026-05-21 08:27:32 | DEBUG | debug | REQUEST: POST /accounts/logout/
+2026-05-21 08:27:32 | DEBUG | debug | REQUEST: POST /accounts/logout/
+2026-05-21 08:27:32 | DEBUG | debug | REQUEST: POST /accounts/logout/
+2026-05-21 08:27:32 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:32 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:32 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:33 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:27:33 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:27:33 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:27:33 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:33 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:33 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:35 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-21 08:27:35 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-21 08:27:35 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-21 08:27:35 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:35 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:35 | DEBUG | debug | USER: Anonymous
+2026-05-21 08:27:44 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-21 08:27:44 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-21 08:27:44 | DEBUG | debug | REQUEST: POST /accounts/login/
+2026-05-21 08:27:44 | DEBUG | debug | USER: daria
+2026-05-21 08:27:44 | DEBUG | debug | USER: daria
+2026-05-21 08:27:44 | DEBUG | debug | USER: daria
+2026-05-21 08:27:49 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:27:49 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:27:49 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:27:49 | DEBUG | debug | USER: daria
+2026-05-21 08:27:49 | DEBUG | debug | USER: daria
+2026-05-21 08:27:49 | DEBUG | debug | USER: daria
+2026-05-21 08:27:54 | DEBUG | debug | REQUEST: GET /admin/
+2026-05-21 08:27:54 | DEBUG | debug | REQUEST: GET /admin/
+2026-05-21 08:27:54 | DEBUG | debug | REQUEST: GET /admin/
+2026-05-21 08:27:54 | DEBUG | debug | USER: daria
+2026-05-21 08:27:54 | DEBUG | debug | USER: daria
+2026-05-21 08:27:54 | DEBUG | debug | USER: daria
+2026-05-21 08:27:59 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/
+2026-05-21 08:27:59 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/
+2026-05-21 08:27:59 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/
+2026-05-21 08:27:59 | DEBUG | debug | USER: daria
+2026-05-21 08:27:59 | DEBUG | debug | USER: daria
+2026-05-21 08:27:59 | DEBUG | debug | USER: daria
+2026-05-21 08:27:59 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:27:59 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:27:59 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:27:59 | DEBUG | debug | USER: daria
+2026-05-21 08:27:59 | DEBUG | debug | USER: daria
+2026-05-21 08:27:59 | DEBUG | debug | USER: daria
+2026-05-21 08:28:02 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/1/change/
+2026-05-21 08:28:02 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/1/change/
+2026-05-21 08:28:02 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/1/change/
+2026-05-21 08:28:02 | DEBUG | debug | USER: daria
+2026-05-21 08:28:02 | DEBUG | debug | USER: daria
+2026-05-21 08:28:02 | DEBUG | debug | USER: daria
+2026-05-21 08:28:02 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:02 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:02 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:02 | DEBUG | debug | USER: daria
+2026-05-21 08:28:02 | DEBUG | debug | USER: daria
+2026-05-21 08:28:02 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: POST /admin/core/companyinfo/1/change/
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: POST /admin/core/companyinfo/1/change/
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: POST /admin/core/companyinfo/1/change/
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: GET /admin/core/companyinfo/
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:26 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:26 | DEBUG | debug | USER: daria
+2026-05-21 08:28:44 | DEBUG | debug | REQUEST: GET /admin/core/employee/
+2026-05-21 08:28:44 | DEBUG | debug | REQUEST: GET /admin/core/employee/
+2026-05-21 08:28:44 | DEBUG | debug | REQUEST: GET /admin/core/employee/
+2026-05-21 08:28:44 | DEBUG | debug | USER: daria
+2026-05-21 08:28:44 | DEBUG | debug | USER: daria
+2026-05-21 08:28:44 | DEBUG | debug | USER: daria
+2026-05-21 08:28:44 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:44 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:44 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:44 | DEBUG | debug | USER: daria
+2026-05-21 08:28:44 | DEBUG | debug | USER: daria
+2026-05-21 08:28:44 | DEBUG | debug | USER: daria
+2026-05-21 08:28:45 | DEBUG | debug | REQUEST: GET /admin/core/employee/1/change/
+2026-05-21 08:28:45 | DEBUG | debug | REQUEST: GET /admin/core/employee/1/change/
+2026-05-21 08:28:45 | DEBUG | debug | REQUEST: GET /admin/core/employee/1/change/
+2026-05-21 08:28:45 | DEBUG | debug | USER: daria
+2026-05-21 08:28:45 | DEBUG | debug | USER: daria
+2026-05-21 08:28:45 | DEBUG | debug | USER: daria
+2026-05-21 08:28:45 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:45 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:45 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:28:45 | DEBUG | debug | USER: daria
+2026-05-21 08:28:45 | DEBUG | debug | USER: daria
+2026-05-21 08:28:45 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: POST /admin/core/employee/1/change/
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: POST /admin/core/employee/1/change/
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: POST /admin/core/employee/1/change/
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: GET /admin/core/employee/
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: GET /admin/core/employee/
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: GET /admin/core/employee/
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:29:04 | DEBUG | debug | REQUEST: GET /admin/jsi18n/
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:29:04 | DEBUG | debug | USER: daria
+2026-05-21 08:30:02 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:30:02 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:30:02 | DEBUG | debug | REQUEST: GET /
+2026-05-21 08:30:02 | DEBUG | debug | USER: daria
+2026-05-21 08:30:02 | DEBUG | debug | USER: daria
+2026-05-21 08:30:02 | DEBUG | debug | USER: daria
+2026-05-21 08:30:04 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:30:04 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:30:04 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:30:04 | DEBUG | debug | USER: daria
+2026-05-21 08:30:04 | DEBUG | debug | USER: daria
+2026-05-21 08:30:04 | DEBUG | debug | USER: daria
+2026-05-21 08:30:04 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 08:30:04 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 08:30:04 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 08:30:04 | DEBUG | debug | USER: daria
+2026-05-21 08:30:04 | DEBUG | debug | USER: daria
+2026-05-21 08:30:04 | DEBUG | debug | USER: daria
+2026-05-21 08:30:12 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:30:12 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:30:12 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:30:12 | DEBUG | debug | USER: daria
+2026-05-21 08:30:12 | DEBUG | debug | USER: daria
+2026-05-21 08:30:12 | DEBUG | debug | USER: daria
+2026-05-21 08:30:12 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-05-21 08:30:12 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-05-21 08:30:12 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-05-21 08:30:12 | DEBUG | debug | USER: daria
+2026-05-21 08:30:12 | DEBUG | debug | USER: daria
+2026-05-21 08:30:12 | DEBUG | debug | USER: daria
+2026-05-21 08:32:55 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:32:55 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:32:55 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 08:32:55 | DEBUG | debug | USER: daria
+2026-05-21 08:32:55 | DEBUG | debug | USER: daria
+2026-05-21 08:32:55 | DEBUG | debug | USER: daria
+2026-05-21 08:32:56 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-05-21 08:32:56 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-05-21 08:32:56 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-05-21 08:32:56 | DEBUG | debug | USER: daria
+2026-05-21 08:32:56 | DEBUG | debug | USER: daria
+2026-05-21 08:32:56 | DEBUG | debug | USER: daria
+2026-05-21 08:32:59 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:32:59 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:32:59 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 08:32:59 | DEBUG | debug | USER: daria
+2026-05-21 08:32:59 | DEBUG | debug | USER: daria
+2026-05-21 08:32:59 | DEBUG | debug | USER: daria
+2026-05-21 08:33:00 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 08:33:00 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 08:33:00 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 08:33:00 | DEBUG | debug | USER: daria
+2026-05-21 08:33:00 | DEBUG | debug | USER: daria
+2026-05-21 08:33:00 | DEBUG | debug | USER: daria
+2026-05-21 08:33:56 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 08:33:56 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 08:33:56 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 08:33:56 | DEBUG | debug | USER: daria
+2026-05-21 08:33:56 | DEBUG | debug | USER: daria
+2026-05-21 08:33:56 | DEBUG | debug | USER: daria
+2026-05-21 08:34:00 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 08:34:00 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 08:34:00 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 08:34:00 | DEBUG | debug | USER: daria
+2026-05-21 08:34:00 | DEBUG | debug | USER: daria
+2026-05-21 08:34:00 | DEBUG | debug | USER: daria
+2026-05-21 08:34:00 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 08:34:00 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 08:34:00 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 08:34:00 | DEBUG | debug | USER: daria
+2026-05-21 08:34:00 | DEBUG | debug | USER: daria
+2026-05-21 08:34:00 | DEBUG | debug | USER: daria
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /about/
+2026-05-21 12:13:16 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:16 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:16 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /dashboard/order/create/
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /dashboard/order/create/
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /dashboard/order/create/
+2026-05-21 12:13:16 | DEBUG | debug | USER: admin
+2026-05-21 12:13:16 | DEBUG | debug | USER: admin
+2026-05-21 12:13:16 | DEBUG | debug | USER: admin
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /dashboard/order/1/
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /dashboard/order/1/
+2026-05-21 12:13:16 | DEBUG | debug | REQUEST: GET /dashboard/order/1/
+2026-05-21 12:13:16 | DEBUG | debug | USER: admin
+2026-05-21 12:13:16 | DEBUG | debug | USER: admin
+2026-05-21 12:13:16 | DEBUG | debug | USER: admin
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-21 12:13:17 | DEBUG | debug | USER: user
+2026-05-21 12:13:17 | DEBUG | debug | USER: user
+2026-05-21 12:13:17 | DEBUG | debug | USER: user
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /dashboard/orders/
+2026-05-21 12:13:17 | DEBUG | debug | USER: admin
+2026-05-21 12:13:17 | DEBUG | debug | USER: admin
+2026-05-21 12:13:17 | DEBUG | debug | USER: admin
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /client/order/1/add/
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /client/order/1/add/
+2026-05-21 12:13:17 | DEBUG | debug | REQUEST: GET /client/order/1/add/
+2026-05-21 12:13:17 | DEBUG | debug | USER: user
+2026-05-21 12:13:17 | DEBUG | debug | USER: user
+2026-05-21 12:13:17 | DEBUG | debug | USER: user
+2026-05-21 12:13:18 | DEBUG | debug | REQUEST: GET /client/order/create/
+2026-05-21 12:13:18 | DEBUG | debug | REQUEST: GET /client/order/create/
+2026-05-21 12:13:18 | DEBUG | debug | REQUEST: GET /client/order/create/
+2026-05-21 12:13:18 | DEBUG | debug | USER: user
+2026-05-21 12:13:18 | DEBUG | debug | USER: user
+2026-05-21 12:13:18 | DEBUG | debug | USER: user
+2026-05-21 12:13:18 | DEBUG | debug | REQUEST: POST /client/order/create/
+2026-05-21 12:13:18 | DEBUG | debug | REQUEST: POST /client/order/create/
+2026-05-21 12:13:18 | DEBUG | debug | REQUEST: POST /client/order/create/
+2026-05-21 12:13:18 | DEBUG | debug | USER: user
+2026-05-21 12:13:18 | DEBUG | debug | USER: user
+2026-05-21 12:13:18 | DEBUG | debug | USER: user
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/
+2026-05-21 12:13:19 | DEBUG | debug | USER: user
+2026-05-21 12:13:19 | DEBUG | debug | USER: user
+2026-05-21 12:13:19 | DEBUG | debug | USER: user
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/order/1/summary/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/order/1/summary/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /client/order/1/summary/
+2026-05-21 12:13:19 | DEBUG | debug | USER: user
+2026-05-21 12:13:19 | DEBUG | debug | USER: user
+2026-05-21 12:13:19 | DEBUG | debug | USER: user
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /glossary/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /glossary/
+2026-05-21 12:13:19 | DEBUG | debug | REQUEST: GET /glossary/
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:19 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:20 | DEBUG | debug | REQUEST: GET /
+2026-05-21 12:13:20 | DEBUG | debug | REQUEST: GET /
+2026-05-21 12:13:20 | DEBUG | debug | REQUEST: GET /
+2026-05-21 12:13:20 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:20 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:20 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:20 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-21 12:13:20 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-21 12:13:20 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-05-21 12:13:20 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:20 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:20 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/
+2026-05-21 12:13:21 | DEBUG | debug | USER: master
+2026-05-21 12:13:21 | DEBUG | debug | USER: master
+2026-05-21 12:13:21 | DEBUG | debug | USER: master
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/order/1/edit/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/order/1/edit/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /master/order/1/edit/
+2026-05-21 12:13:21 | DEBUG | debug | USER: master
+2026-05-21 12:13:21 | DEBUG | debug | USER: master
+2026-05-21 12:13:21 | DEBUG | debug | USER: master
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /privacy/
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /register/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /register/
+2026-05-21 12:13:21 | DEBUG | debug | REQUEST: GET /register/
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:21 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: GET /reviews/add/
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: GET /reviews/add/
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: GET /reviews/add/
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: POST /reviews/add/
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: POST /reviews/add/
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: POST /reviews/add/
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: POST /reviews/1/delete/
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: POST /reviews/1/delete/
+2026-05-21 12:13:22 | DEBUG | debug | REQUEST: POST /reviews/1/delete/
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:22 | DEBUG | debug | USER: user
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /reviews/1/edit/
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /reviews/1/edit/
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /reviews/1/edit/
+2026-05-21 12:13:23 | DEBUG | debug | USER: user
+2026-05-21 12:13:23 | DEBUG | debug | USER: user
+2026-05-21 12:13:23 | DEBUG | debug | USER: user
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /reviews/
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /reviews/
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /reviews/
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?type=1
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?type=1
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?type=1
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?search=%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B0
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?search=%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B0
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?search=%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B0
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?sort=price_asc
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?sort=price_asc
+2026-05-21 12:13:23 | DEBUG | debug | REQUEST: GET /services/?sort=price_asc
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:23 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 12:13:24 | DEBUG | debug | USER: user
+2026-05-21 12:13:24 | DEBUG | debug | USER: user
+2026-05-21 12:13:24 | DEBUG | debug | USER: user
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /statistics/
+2026-05-21 12:13:24 | DEBUG | debug | USER: admin
+2026-05-21 12:13:24 | DEBUG | debug | USER: admin
+2026-05-21 12:13:24 | DEBUG | debug | USER: admin
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /vacancies/
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /vacancies/
+2026-05-21 12:13:24 | DEBUG | debug | REQUEST: GET /vacancies/
+2026-05-21 12:13:24 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:24 | DEBUG | debug | USER: Anonymous
+2026-05-21 12:13:24 | DEBUG | debug | USER: Anonymous
+2026-05-21 14:41:53 | DEBUG | debug | REQUEST: GET /
+2026-05-21 14:41:53 | DEBUG | debug | REQUEST: GET /
+2026-05-21 14:41:53 | DEBUG | debug | REQUEST: GET /
+2026-05-21 14:41:53 | DEBUG | debug | USER: meew123
+2026-05-21 14:41:53 | DEBUG | debug | USER: meew123
+2026-05-21 14:41:53 | DEBUG | debug | USER: meew123
+2026-05-21 14:41:57 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 14:41:57 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 14:41:57 | DEBUG | debug | REQUEST: GET /news/
+2026-05-21 14:41:57 | DEBUG | debug | USER: meew123
+2026-05-21 14:41:57 | DEBUG | debug | USER: meew123
+2026-05-21 14:41:57 | DEBUG | debug | USER: meew123
+2026-05-21 14:41:57 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 14:41:57 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 14:41:57 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-05-21 14:41:57 | DEBUG | debug | USER: meew123
+2026-05-21 14:41:57 | DEBUG | debug | USER: meew123
+2026-05-21 14:41:57 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:27 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-21 14:42:27 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-21 14:42:27 | DEBUG | debug | REQUEST: GET /news/1/
+2026-05-21 14:42:27 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:27 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:27 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:34 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 14:42:34 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 14:42:34 | DEBUG | debug | REQUEST: GET /contacts/
+2026-05-21 14:42:34 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:34 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:34 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:34 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 14:42:34 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 14:42:34 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-05-21 14:42:34 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:34 | DEBUG | debug | USER: meew123
+2026-05-21 14:42:34 | DEBUG | debug | USER: meew123
+2026-09-04 13:58:22 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:22 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:22 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:22 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:22 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:22 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:38 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:38 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:38 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:38 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:38 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:38 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:38 | DEBUG | debug | REQUEST: GET /favicon.ico
+2026-09-04 13:58:38 | DEBUG | debug | REQUEST: GET /favicon.ico
+2026-09-04 13:58:38 | DEBUG | debug | REQUEST: GET /favicon.ico
+2026-09-04 13:58:38 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:38 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:38 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:47 | DEBUG | debug | REQUEST: GET /about/
+2026-09-04 13:58:47 | DEBUG | debug | REQUEST: GET /about/
+2026-09-04 13:58:47 | DEBUG | debug | REQUEST: GET /about/
+2026-09-04 13:58:47 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:47 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:47 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:47 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-09-04 13:58:47 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-09-04 13:58:47 | DEBUG | debug | REQUEST: GET /media/company/image_2026-05-19_20-04-47_TdM7HsQ.png
+2026-09-04 13:58:47 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:47 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:47 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:54 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:58:54 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:58:54 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:58:54 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:54 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:54 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:54 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-09-04 13:58:54 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-09-04 13:58:54 | DEBUG | debug | REQUEST: GET /media/news/Gemini_Generated_Image_e7q8j0e7q8j0e7q8_1.png
+2026-09-04 13:58:54 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:54 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:54 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:57 | DEBUG | debug | REQUEST: GET /news/1/
+2026-09-04 13:58:57 | DEBUG | debug | REQUEST: GET /news/1/
+2026-09-04 13:58:57 | DEBUG | debug | REQUEST: GET /news/1/
+2026-09-04 13:58:57 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:57 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:57 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:57 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:57 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:57 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:58:57 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:57 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:58:57 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:16 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:59:16 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:59:16 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:59:16 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:16 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:16 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:25 | DEBUG | debug | REQUEST: GET /about/
+2026-09-04 13:59:25 | DEBUG | debug | REQUEST: GET /about/
+2026-09-04 13:59:25 | DEBUG | debug | REQUEST: GET /about/
+2026-09-04 13:59:25 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:25 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:25 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:26 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:26 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:26 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:26 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:26 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:26 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:26 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:59:26 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:59:26 | DEBUG | debug | REQUEST: GET /news/
+2026-09-04 13:59:26 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:26 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:26 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:27 | DEBUG | debug | REQUEST: GET /services/
+2026-09-04 13:59:27 | DEBUG | debug | REQUEST: GET /services/
+2026-09-04 13:59:27 | DEBUG | debug | REQUEST: GET /services/
+2026-09-04 13:59:27 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:27 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:27 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:27 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:27 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:27 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:27 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:27 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:27 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:30 | DEBUG | debug | REQUEST: GET /glossary/
+2026-09-04 13:59:30 | DEBUG | debug | REQUEST: GET /glossary/
+2026-09-04 13:59:30 | DEBUG | debug | REQUEST: GET /glossary/
+2026-09-04 13:59:30 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:30 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:30 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:35 | DEBUG | debug | REQUEST: GET /contacts/
+2026-09-04 13:59:35 | DEBUG | debug | REQUEST: GET /contacts/
+2026-09-04 13:59:35 | DEBUG | debug | REQUEST: GET /contacts/
+2026-09-04 13:59:35 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:35 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:35 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:35 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-09-04 13:59:35 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-09-04 13:59:35 | DEBUG | debug | REQUEST: GET /media/employees/photo_2025-07-17_02-21-34.jpg
+2026-09-04 13:59:35 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:35 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:35 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:40 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:40 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:40 | DEBUG | debug | REQUEST: GET /
+2026-09-04 13:59:40 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:40 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:40 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:59 | DEBUG | debug | REQUEST: GET /services/
+2026-09-04 13:59:59 | DEBUG | debug | REQUEST: GET /services/
+2026-09-04 13:59:59 | DEBUG | debug | REQUEST: GET /services/
+2026-09-04 13:59:59 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:59 | DEBUG | debug | USER: Anonymous
+2026-09-04 13:59:59 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:01 | DEBUG | debug | REQUEST: GET /glossary/
+2026-09-04 14:00:01 | DEBUG | debug | REQUEST: GET /glossary/
+2026-09-04 14:00:01 | DEBUG | debug | REQUEST: GET /glossary/
+2026-09-04 14:00:01 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:01 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:01 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:03 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-09-04 14:00:03 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-09-04 14:00:03 | DEBUG | debug | REQUEST: GET /promocodes/
+2026-09-04 14:00:03 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:03 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:03 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:31 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-09-04 14:00:31 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-09-04 14:00:31 | DEBUG | debug | REQUEST: GET /accounts/login/
+2026-09-04 14:00:31 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:31 | DEBUG | debug | USER: Anonymous
+2026-09-04 14:00:31 | DEBUG | debug | USER: Anonymous

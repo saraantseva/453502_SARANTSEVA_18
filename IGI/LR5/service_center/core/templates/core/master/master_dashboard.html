@@ -1,0 +1,132 @@
+{% extends 'core/base.html' %}
+{% load tz %}
+
+{% block content %}
+<h1>Личный кабинет мастера</h1>
+
+<h3>Информация о мастере</h3>
+<p><strong>ФИО:</strong> {{ employee.full_name }}</p>
+<p><strong>Телефон:</strong> {{ employee.phone }}</p>
+<p><strong>Специализации:</strong>
+    {% for spec in employee.specialization.all %}
+        {{ spec.name }}{% if not forloop.last %}, {% endif %}
+    {% empty %}
+        <em>Не указаны</em>
+    {% endfor %}
+</p>
+
+<hr>
+
+<h3>Мои заказы</h3>
+
+<form method="get">
+    <p>
+        <label>Поиск:</label><br>
+        <input type="text" name="search" value="{{ search_query }}" placeholder="Номер заказа или ФИО клиента">
+    </p>
+    
+    <p>
+        <label>Статус:</label><br>
+        <select name="status">
+            <option value="">Все статусы</option>
+            <option value="new" {% if status_filter == 'new' %}selected{% endif %}>Новый</option>
+            <option value="diagnostics" {% if status_filter == 'diagnostics' %}selected{% endif %}>На диагностике</option>
+            <option value="waiting_parts" {% if status_filter == 'waiting_parts' %}selected{% endif %}>Ожидает запчасти</option>
+            <option value="in_repair" {% if status_filter == 'in_repair' %}selected{% endif %}>В ремонте</option>
+            <option value="ready" {% if status_filter == 'ready' %}selected{% endif %}>Готов к выдаче</option>
+            <option value="completed" {% if status_filter == 'completed' %}selected{% endif %}>Выполнен</option>
+            <option value="cancelled" {% if status_filter == 'cancelled' %}selected{% endif %}>Отменен</option>
+        </select>
+    </p>
+    
+    <p>
+        <label>Сортировка:</label><br>
+        <select name="sort">
+            <option value="newest" {% if selected_sort == 'newest' %}selected{% endif %}>Сначала новые</option>
+            <option value="oldest" {% if selected_sort == 'oldest' %}selected{% endif %}>Сначала старые</option>
+        </select>
+    </p>
+    
+    <p>
+        <button type="submit">Применить</button>
+        <a href="{% url 'core:master_dashboard' %}">Сбросить</a>
+    </p>
+</form>
+
+<hr>
+
+{% if orders %}
+    {% for order in orders %}
+        <div style="margin-bottom: 30px; padding: 15px; border: 1px solid #ccc;">
+            <h3>Заказ №{{ order.order_number }}</h3>
+            <p><strong>Статус:</strong> {{ order.get_status_display }}</p>
+            
+            <p><strong>Клиент:</strong> {{ order.client.full_name }}<br>
+            <strong>Телефон:</strong> {{ order.client.phone }}</p>
+            
+            <p><strong>Устройство:</strong> {{ order.device.brand }} {{ order.device.model }}<br>
+            <strong>Проблема:</strong> {{ order.client_problem }}</p>
+            
+            <p><strong>Создан:</strong> {{ order.created_at|localtime|date:"d/m/Y H:i" }}<br>
+            <strong>Стоимость:</strong> {{ order.total_cost }} руб.</p>
+            
+            <h4>Услуги:</h4>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <th>Название</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Сумма</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for item in order.order_services.all %}
+                        <tr>
+                            <td>{{ item.service.name }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>{{ item.price_at_time }} руб.</td>
+                            <td>{{ item.price_at_time|floatformat:2 }} руб.</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="4">Нет услуг</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            <h4>Запчасти:</h4>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <th>Название</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Сумма</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for item in order.order_spare_parts.all %}
+                        <tr>
+                            <td>{{ item.spare_part.name }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>{{ item.price_at_time }} руб.</td>
+                            <td>{{ item.price_at_time|floatformat:2 }} руб.</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="4">Нет запчастей</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            <p><a href="{% url 'core:master_edit_order' order.id %}">Редактировать заказ</a></p>
+        </div>
+    {% endfor %}
+    
+    <p>Всего заказов: {{ orders|length }}</p>
+{% else %}
+    <p>У вас нет заказов.</p>
+{% endif %}
+
+{% endblock %}

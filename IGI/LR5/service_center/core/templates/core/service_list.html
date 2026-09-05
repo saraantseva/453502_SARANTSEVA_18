@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="page-title" style="text-align: center;">Наши услуги</h1>
+
+<div class="card" style="margin-bottom: 30px;">
+    <form method="get" style="display: flex; gap: 15px; align-items: flex-end; flex-wrap: wrap;">
+        
+        <div style="flex: 2; min-width: 200px;">
+            <label>Поиск по названию</label><br>
+            <input type="text" name="search" value="{{ search_query }}" placeholder="Например: диагностика..." style="width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #ddd;">
+        </div>
+        
+        <div>
+            <label>Тип услуги</label><br>
+            <select name="type" style="padding: 8px; border-radius: 8px; border: 1px solid #ddd;">
+                <option value="">Все</option>
+                {% for t in service_types %}
+                    <option value="{{ t.id }}" {% if selected_type|stringformat:"s" == t.id|stringformat:"s" %}selected{% endif %}>
+                        {{ t.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <div>
+            <label>Сортировка по цене</label><br>
+            <select name="sort" style="padding: 8px; border-radius: 8px; border: 1px solid #ddd;">
+                <option value="">Без сортировки</option>
+                <option value="price_asc" {% if selected_sort == 'price_asc' %}selected{% endif %}>Сначала дешёвые</option>
+                <option value="price_desc" {% if selected_sort == 'price_desc' %}selected{% endif %}>Сначала дорогие</option>
+            </select>
+        </div>
+        
+        <div>
+            <button type="submit" class="button">Применить</button>
+            <a href="{% url 'core:service_list' %}" class="button" style="background-color: #6c757d;">Сбросить</a>
+        </div>
+    </form>
+</div>
+
+{% if services %}
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        {% for service in services %}
+            <div class="card">
+                <h3>{{ service.name }}</h3>
+                <p><strong>Тип:</strong> {{ service.service_type.name }}</p>
+                <p><strong>Цена:</strong> {{ service.price }} руб.</p>
+                <p><strong>Срок:</strong> {{ service.duration_days }} дн.</p>
+            </div>
+        {% endfor %}
+    </div>
+    <p style="margin-top: 20px; color: #888; text-align: center;">Найдено услуг: {{ services|length }}</p>
+{% else %}
+    <div style="text-align: center; padding: 60px 20px; background: white; border-radius: 12px;">
+        <p style="font-size: 1.1rem;">Услуги не найдены. Попробуйте изменить параметры поиска.</p>
+    </div>
+{% endif %}
+
+{% endblock %}
