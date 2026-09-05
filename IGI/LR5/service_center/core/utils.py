@@ -4,6 +4,8 @@ from zoneinfo import ZoneInfo
 from django.utils import timezone
 import requests
 
+from django.utils import timezone
+import pytz
 
 def utc_to_local(dt):
     """Переводит UTC в локальное время (по времени сервера)"""
@@ -15,13 +17,14 @@ def utc_to_local(dt):
     return dt.astimezone()
 
 def get_timezone_context():
-    """Возвращает словарь с временем, часовым поясом и календарём для всех страниц."""
+    tz = timezone.get_current_timezone()
+    now_utc = timezone.now()
+    now_local = timezone.localtime(now_utc)
 
     today = date.today()
     cal = monthcalendar(today.year, today.month)
     weekdays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 
-    # календарь 
     calendar_lines = []
     calendar_lines.append(' '.join(weekdays))
     for week in cal:
@@ -35,12 +38,12 @@ def get_timezone_context():
                 week_str.append(f'{day:2}')
         calendar_lines.append(' '.join(week_str))
 
-    tz = ZoneInfo('Europe/Minsk')
-    now_utc = datetime.now(ZoneInfo('UTC'))
-    now_local = now_utc.astimezone(tz)
+    offset = now_local.utcoffset()
+    offset_hours = int(offset.total_seconds() // 3600)
+    offset_str = f'UTC{offset_hours:+d}'
 
     return {
-        'user_timezone': 'Europe/Minsk',
+        'user_timezone': f'{tz.key} ({offset_str})',
         'current_user_time': now_local.strftime('%d/%m/%Y %H:%M:%S'),
         'current_utc_time': now_utc.strftime('%d/%m/%Y %H:%M:%S'),
         'calendar_text': '\n'.join(calendar_lines),
@@ -100,3 +103,4 @@ def get_nasa_apod_cached():
     except:
         pass
     return None
+
