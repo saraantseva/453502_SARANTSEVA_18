@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>Отзывы</h1>
+
+{% if user.is_authenticated %}
+    {% if perms.core.can_add_review %}
+        <p><a href="{% url 'core:review_add' %}" class="button">+ Добавить отзыв</a></p>
+    {% endif %}
+{% else %}
+    <p><a href="{% url 'login' %}" class="button">Войдите, чтобы оставить отзыв</a></p>
+{% endif %}
+
+<hr>
+
+{% if reviews %}
+    {% for review in reviews %}
+        <div class="review-item" style="border-bottom: 1px solid #ccc; margin-bottom: 15px; padding-bottom: 10px;">
+            <p>
+                <strong>{{ review.user.username }}</strong> 
+                ({{ review.rating }}★) – 
+                {{ review.created_at|date:"d/m/Y H:i" }}
+            </p>
+            <p>{{ review.text|linebreaks }}</p>
+            {% if review.user == user and perms.core.can_edit_own_review %}
+                <p>
+                    <a href="{% url 'core:review_edit' review.id %}">Редактировать</a> |
+                    <a href="{% url 'core:review_delete' review.id %}">Удалить</a>
+                </p>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% else %}
+    <p>Пока нет отзывов. Будьте первым!</p>
+{% endif %}
+
+{% endblock %}

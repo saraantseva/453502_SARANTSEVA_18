@@ -1,0 +1,77 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>Управление заказами</h1>
+
+<div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <a href="{% url 'core:admin_order_create' %}" class="button" style="background: #28a745; padding: 8px 16px; text-decoration: none; color: white; border-radius: 4px;">+ Создать новый заказ</a>
+    
+    <a href="/admin/" target="_blank" style="background: #1a1a2e; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px;">⚙️ Перейти в админ-панель Django</a>
+</div>
+
+<div style="margin-bottom: 20px;">
+    <form method="get" style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <input type="text" name="search" value="{{ search }}" placeholder="Поиск по номеру или клиенту" style="flex: 2; padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+        <select name="status" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+            <option value="">Все статусы</option>
+            {% for value, label in status_choices %}
+                <option value="{{ value }}" {% if status_filter == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" style="padding: 8px 16px; background: #e94560; color: white; border: none; border-radius: 4px; cursor: pointer;">Применить</button>
+        <a href="{% url 'core:admin_orders' %}" style="padding: 8px 16px; background: #6c757d; color: white; text-decoration: none; border-radius: 4px;">Сбросить</a>
+    </form>
+</div>
+
+{% if orders %}
+    <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background: #f2f2f2;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">№ заказа</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Клиент</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Устройство</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Статус</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Стоимость</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">{{ order.order_number }}</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">{{ order.client.full_name }}</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">{{ order.device.brand }} {{ order.device.model }}</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">{{ order.get_status_display }}</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">{{ order.total_cost }} руб.</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <a href="{% url 'core:admin_order_detail' order.id %}" style="color: #e94560;">📝 Редактировать</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% if orders.has_other_pages %}
+    <div style="margin-top: 20px; text-align: center;">
+        {% if orders.has_previous %}
+            <a href="?page=1&search={{ search }}&status={{ status_filter }}" style="margin: 0 5px;">« Первая</a>
+            <a href="?page={{ orders.previous_page_number }}&search={{ search }}&status={{ status_filter }}" style="margin: 0 5px;">‹ Предыдущая</a>
+        {% endif %}
+        <span style="margin: 0 5px;">Страница {{ orders.number }} из {{ orders.paginator.num_pages }}</span>
+        {% if orders.has_next %}
+            <a href="?page={{ orders.next_page_number }}&search={{ search }}&status={{ status_filter }}" style="margin: 0 5px;">Следующая ›</a>
+            <a href="?page={{ orders.paginator.num_pages }}&search={{ search }}&status={{ status_filter }}" style="margin: 0 5px;">Последняя »</a>
+        {% endif %}
+    </div>
+    {% endif %}
+
+{% else %}
+    <div style="text-align: center; padding: 40px; background: white; border-radius: 8px;">
+        <p>Заказов не найдено.</p>
+        <a href="{% url 'core:admin_order_create' %}" class="button" style="background: #28a745; padding: 8px 16px; text-decoration: none; color: white; border-radius: 4px;">Создать первый заказ</a>
+    </div>
+{% endif %}
+
+{% endblock %}

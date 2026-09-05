@@ -1,0 +1,89 @@
+{% extends 'core/base.html' %}
+{% load tz %}
+
+{% block content %}
+<h1>Заказ №{{ order.order_number }}</h1>
+
+<p><a href="{% url 'core:admin_orders' %}">← Назад к списку заказов</a> | <a href="/admin/core/order/{{ order.id }}/change/" target="_blank">✏️ Редактировать в админке</a></p>
+
+<div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd;">
+    <h3>Основная информация</h3>
+    <p><strong>Клиент:</strong> {{ order.client.full_name }} (тел.: {{ order.client.phone }})</p>
+    <p><strong>Устройство:</strong> {{ order.device.brand }} {{ order.device.model }} (SN: {{ order.device.serial_number|default:"не указан" }})</p>
+    <p><strong>Проблема:</strong> {{ order.client_problem|default:"не указана" }}</p>
+    <p><strong>Создан:</strong> {{ order.created_at|localtime|date:"d/m/Y H:i" }}</p>
+    <p><strong>Последнее обновление:</strong> {{ order.updated_at|localtime|date:"d/m/Y H:i" }}</p>
+    <p><strong>Заметки мастера:</strong> {{ order.master_note|default:"нет" }}</p>
+    
+    <form method="post" style="margin-top: 15px;">
+        {% csrf_token %}
+        <label><strong>Изменить статус:</strong></label>
+        <select name="status">
+            {% for value, label in status_choices %}
+                <option value="{{ value }}" {% if order.status == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" name="update_status">Обновить статус</button>
+    </form>
+</div>
+
+<div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd;">
+    <h3>Услуги</h3>
+    <ul>
+        {% for item in services %}
+            <li>{{ item.service.name }} x{{ item.quantity }} = {{ item.price_at_time }} руб.
+                <form method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="service_id" value="{{ item.id }}">
+                    <button type="submit" name="delete_service" style="background: #e94560; color: white; border: none; padding: 2px 8px; margin-left: 10px; cursor: pointer;">Удалить</button>
+                </form>
+            </li>
+        {% empty %}
+            <li>Нет услуг</li>
+        {% endfor %}
+    </ul>
+    
+    <form method="post" style="margin-top: 15px;">
+        {% csrf_token %}
+        {{ service_form.as_p }}
+        <button type="submit" name="add_service">+ Добавить услугу</button>
+    </form>
+</div>
+
+<div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd;">
+    <h3>Запчасти</h3>
+    <ul>
+        {% for item in spare_parts %}
+            <li>{{ item.spare_part.name }} x{{ item.quantity }} = {{ item.price_at_time }} руб.
+                <form method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="spare_id" value="{{ item.id }}">
+                    <button type="submit" name="delete_spare" style="background: #e94560; color: white; border: none; padding: 2px 8px; margin-left: 10px; cursor: pointer;">Удалить</button>
+                </form>
+            </li>
+        {% empty %}
+            <li>Нет запчастей</li>
+        {% endfor %}
+    </ul>
+    
+    <form method="post" style="margin-top: 15px;">
+        {% csrf_token %}
+        {{ spare_form.as_p }}
+        <button type="submit" name="add_spare">+ Добавить запчасть</button>
+    </form>
+</div>
+
+<div style="padding: 15px; border: 1px solid #ddd; background: #f8f9fa;">
+    <p><strong>Стоимость услуг:</strong> {{ order.calculate_total_cost }} руб.</p>
+    {% if order.promocode %}
+        <p><strong>Промокод:</strong> {{ order.promocode.code }} (скидка {{ order.promocode.discount_percent }}%)</p>
+    {% endif %}
+    <p><strong>Итоговая стоимость:</strong> {{ order.total_cost }} руб.</p>
+    
+    <form method="post" style="margin-top: 15px;" onsubmit="return confirm('Вы уверены, что хотите удалить этот заказ?');">
+        {% csrf_token %}
+        <button type="submit" name="delete_order" style="background: #dc3545; color: white; border: none; padding: 8px 16px; cursor: pointer;">🗑️ Удалить заказ</button>
+    </form>
+</div>
+
+{% endblock %}
