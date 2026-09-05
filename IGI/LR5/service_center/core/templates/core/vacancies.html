@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="page-title">Вакансии</h1>
+
+{% if vacancies %}
+    {% for vacancy in vacancies %}
+        <div class="card">
+            <h3>{{ vacancy.title }}</h3>
+            {% if vacancy.salary_min or vacancy.salary_max %}
+                <p><strong>Зарплата:</strong> 
+                {% if vacancy.salary_min %}{{ vacancy.salary_min }} руб.{% endif %}
+                {% if vacancy.salary_min and vacancy.salary_max %} - {% endif %}
+                {% if vacancy.salary_max %}{{ vacancy.salary_max }} руб.{% endif %}
+                </p>
+            {% endif %}
+            <p>{{ vacancy.description|linebreaks }}</p>
+            <div style="margin-top: 10px; font-size: 0.7rem; color: #888; border-top: 1px solid #e2e8f0; padding-top: 8px;">
+                <p>Дата публикации (UTC): {{ vacancy.created_utc }}</p>
+                <p>Дата публикации (ваш часовой пояс): {{ vacancy.created_local }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="card"><p>Активных вакансий пока нет.</p></div>
+{% endif %}
+
+{% endblock %}

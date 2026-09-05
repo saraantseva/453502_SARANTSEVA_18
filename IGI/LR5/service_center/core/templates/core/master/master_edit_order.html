@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load tz %}
+
+{% block content %}
+<h1>Редактирование заказа №{{ order.order_number }}</h1>
+
+<div>
+    <p><strong>Клиент:</strong> {{ order.client.full_name }}</p>
+    <p><strong>Телефон:</strong> {{ order.client.phone }}</p>
+    <p><strong>Устройство:</strong> {{ order.device.brand }} {{ order.device.model }}</p>
+    <p><strong>Проблема:</strong> {{ order.client_problem }}</p>
+    <p><strong>Создан:</strong> {{ order.created_at|localtime|date:"d/m/Y H:i" }}</p>
+    <p><strong>Текущая стоимость:</strong> {{ order.total_cost }} руб.</p>
+</div>
+
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить изменения</button>
+    <a href="{% url 'core:master_dashboard' %}">Отмена</a>
+</form>
+
+{% endblock %}

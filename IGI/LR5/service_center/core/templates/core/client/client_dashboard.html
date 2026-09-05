@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load tz %}
+
+{% block content %}
+<h1>Личный кабинет клиента</h1>
+
+<p><strong>ФИО:</strong> {{ client.full_name }}</p>
+<p><strong>Телефон:</strong> {{ client.phone }}</p>
+<p><strong>Email:</strong> {{ client.user.email }}</p>
+
+{% if discount %}
+    <p>Ваша активная скидка: {{ discount }}%</p>
+{% endif %}
+
+<hr>
+
+<h3>Мои заказы</h3>
+<p><a href="{% url 'core:client_create_order' %}">+ Создать новый заказ</a></p>
+
+{% if orders %}
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr><th>№ заказа</th><th>Статус</th><th>Создан</th><th>Стоимость</th><th></th></tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.order_number }}</td>
+                <td>{{ order.get_status_display }}</td>
+                <td>{{ order.created_at|localtime|date:"d/m/Y H:i" }}</td>
+                <td>{{ order.total_cost }} руб.</td>
+                <td><a href="{% url 'core:client_add_items' order.id %}">Редактировать</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Всего заказов: {{ orders|length }}</p>
+{% else %}
+    <p>У вас нет заказов. Создайте первый!</p>
+{% endif %}
+
+{% endblock %}

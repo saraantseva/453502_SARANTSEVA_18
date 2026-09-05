@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="page-title">О компании</h1>
+
+{% if company_info %}
+<div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 30px;">
+    <div style="flex-shrink: 0;">
+        {% if company_info.logo %}
+            <img src="{{ company_info.logo.url }}" alt="Логотип" style="max-width: 150px; height: auto;">
+        {% else %}
+            <img src="{% static 'company/default-logo.png' %}" alt="Логотип" style="max-width: 150px; height: auto;">
+        {% endif %}
+    </div>
+    <div style="flex: 1;">
+        <p>{{ company_info.text|linebreaks }}</p>
+    </div>
+</div>
+
+{% if company_info.requisites %}
+    <div class="card">
+        <h3>Реквизиты</h3>
+        <p>{{ company_info.requisites|linebreaks }}</p>
+    </div>
+{% endif %}
+
+{% if company_info.video_url %}
+    <div class="card">
+        <h3>Видео о компании</h3>
+        <iframe width="560" height="315" src="{{ company_info.video_url }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+{% endif %}
+
+{% else %}
+    <div class="card">
+        <p>Информация о компании скоро появится.</p>
+    </div>
+{% endif %}
+
+{% endblock %}

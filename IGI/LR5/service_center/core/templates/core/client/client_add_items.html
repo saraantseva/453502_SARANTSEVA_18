@@ -1,0 +1,88 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>Редактирование заказа №{{ order.order_number }}</h1>
+
+<h3>Промокод</h3>
+{% if not order.promocode %}
+    <form method="post" style="margin-bottom: 20px;">
+        {% csrf_token %}
+        <input type="text" name="promo_code" placeholder="Введите промокод">
+        <button type="submit" name="apply_promo">Применить промокод</button>
+    </form>
+{% else %}
+    <p>Применён промокод: {{ order.promocode.code }} (скидка {{ order.promocode.discount_percent }}%)</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="remove_promo">Удалить промокод</button>
+    </form>
+{% endif %}
+{% if promo_message %}<p>{{ promo_message }}</p>{% endif %}
+
+<hr>
+
+<h3>Услуги</h3>
+<form method="post" style="display: inline;">
+    {% csrf_token %}
+    {{ service_form.as_p }}
+    <button type="submit" name="add_service">+ Добавить услугу</button>
+</form>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr><th>Услуга</th><th>Кол-во</th><th>Цена</th><th>Удалить</th></tr>
+    </thead>
+    <tbody>
+        {% for item in services %}
+        <tr>
+            <td>{{ item.service.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price_at_time }} руб.</td>
+            <td><a href="{% url 'core:client_remove_order_item' order.id 'service' item.id %}">❌</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<hr>
+
+<h3>Запчасти</h3>
+<form method="post" style="display: inline;">
+    {% csrf_token %}
+    {{ spare_form.as_p }}
+    <button type="submit" name="add_spare">+ Добавить запчасть</button>
+</form>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr><th>Запчасть</th><th>Кол-во</th><th>Цена</th><th>Удалить</th></tr>
+    </thead>
+    <tbody>
+        {% for item in spare_parts %}
+        <tr>
+            <td>{{ item.spare_part.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price_at_time }} руб.</td>
+            <td><a href="{% url 'core:client_remove_order_item' order.id 'spare' item.id %}">❌</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<hr>
+
+<p><strong>Стоимость без скидки:</strong> {{ order.total_cost }} руб.</p>
+{% if order.discount_amount %}
+    <p><strong>Скидка:</strong> {{ order.discount_amount }} руб.</p>
+    <p><strong>Итого к оплате:</strong> {{ final_cost }} руб.</p>
+{% else %}
+    <p><strong>Итого к оплате:</strong> {{ order.total_cost }} руб.</p>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="complete_order">Оформить заказ →</button>
+</form>
+
+<p><a href="{% url 'core:client_dashboard' %}">Сохранить и выйти</a></p>
+{% endblock %}

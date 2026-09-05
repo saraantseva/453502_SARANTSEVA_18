@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>Статистика сервисного центра</h1>
+
+<h2>Клиенты и их сумма заказов</h2>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr><th>Клиент</th><th>Сумма заказов (руб.)</th></tr>
+    </thead>
+    <tbody>
+        {% for client in clients %}
+        <tr><td>{{ client.name }}</td><td>{{ client.total|floatformat:2 }}</td></tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr><td><strong>Общая сумма продаж</strong></td><td><strong>{{ total_sales|floatformat:2 }}</strong></td></tr>
+    </tfoot>
+<table>
+
+<h2>Статистика по суммам заказов</h2>
+<ul>
+    <li>Средняя сумма заказа: {{ avg_amount|floatformat:2 }} руб.</li>
+    <li>Мода суммы заказа: {{ mode_amount|floatformat:2 }} руб.</li>
+    <li>Медиана суммы заказа: {{ median_amount|floatformat:2 }} руб.</li>
+</ul>
+
+<h2>Статистика по возрасту клиентов</h2>
+<ul>
+    <li>Средний возраст: {{ avg_age|floatformat:1 }} лет</li>
+    <li>Медианный возраст: {{ median_age|floatformat:1 }} лет</li>
+</ul>
+
+<h2>Популярность типов услуг</h2>
+<ul>
+    <li>Самый популярный тип услуг: {{ popular_type|default:"нет данных" }}</li>
+    <li>Тип услуг, приносящий наибольшую прибыль: {{ profitable_type|default:"нет данных" }}</li>
+</ul>
+
+<h2>Динамика заказов по месяцам</h2>
+{% if line_chart %}
+    <img src="data:image/png;base64,{{ line_chart }}" alt="Динамика заказов" style="max-width: 100%;">
+{% else %}
+    <p>Недостаточно данных для построения графика.</p>
+{% endif %}
+
+<h2>Распределение заказов по статусам</h2>
+{% if pie_chart %}
+    <img src="data:image/png;base64,{{ pie_chart }}" alt="Статусы заказов" style="max-width: 100%; max-height: 400px;">
+{% else %}
+    <p>Нет данных для построения диаграммы.</p>
+{% endif %}
+
+{% endblock %}
